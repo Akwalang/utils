@@ -1,0 +1,24 @@
+{
+  "name": "utils",
+  "version": "0.1.0",
+  "description": "Utils for work",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReMonkey/utils.git"
+  },
+  "author": "LEroyGGG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReMonkey/utils/issues"
+  },
+  "homepage": "https://github.com/ReMonkey/utils#readme",
+  "type": "module",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "jest": "^28.1.1"
+  }
+}
