@@ -2,7 +2,23 @@
   "name": "utils",
   "version": "0.1.0",
   "description": "Utils for work",
-  "main": "index.js",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./array": "./src/array/index.js",
+    "./array/assign": "./src/array/assign/index.js",
+    "./array/createSorter": "./src/array/createSorter/index.js",
+    "./array/deduplicate": "./src/array/deduplicate/index.js",
+    "./array/deduplicateUsingMap": "./src/array/deduplicateUsingMap/index.js",
+    "./array/difference": "./src/array/difference/index.js",
+    "./array/shuffle": "./src/array/shuffle/index.js",
+    "./common": "./src/common/index.js",
+    "./common/deferred": "./src/common/deferred/index.js",
+    "./common/idGenerator": "./src/common/idGenerator/index.js",
+    "./common/parse": "./src/common/parse/index.js",
+    "./common/setAsyncTimeout": "./src/common/setAsyncTimeout/index.js",
+    "./common/tokenGenerator": "./src/common/tokenGenerator/index.js"
+  },
   "scripts": {
     "test": "jest ./src"
   },
