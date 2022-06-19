@@ -1,6 +1,3 @@
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-
 import readDir from '../../src/directory/read/index.js';
 import isExistsDir from '../../src/directory/isExists/index.js';
 
@@ -9,10 +6,11 @@ import writeFile from '../../src/file/write/index.js';
 
 import args from '../../src/process/args/index.js';
 import resolve from '../../src/path/resolve/index.js';
+import dirname from '../../src/path/dirname/index.js';
 import replace from '../../src/string/replace/index.js';
 import capitalize from '../../src/string/capitalize/index.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = dirname(import.meta);
 
 const files = await readDir(__dirname, 'templates');
 
@@ -32,7 +30,7 @@ if (!name || !method) {
 
 const rootDir = resolve(__dirname, '../../src/', name, method);
 
-const exists = isExistsDir(rootDir);
+const exists = await isExistsDir(rootDir);
 
 if (exists) {
   throw new Error('Method already exists in Module');
