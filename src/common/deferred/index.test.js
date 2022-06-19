@@ -1,6 +1,6 @@
 import deferred from './index.js';
 
-test('Common.deferred: resolve', () => {
+test('Common.deferred: resolve', async () => {
   const defer = deferred();
 
   const success = jest.fn();
@@ -12,13 +12,13 @@ test('Common.deferred: resolve', () => {
 
   defer.resolve();
 
-  setTimeout(() => {
-    expect(success).toHaveBeenCalled();
-    expect(fail).not.toHaveBeenCalled();
-  }, 0)
+  await defer;
+
+  expect(success).toHaveBeenCalled();
+  expect(fail).not.toHaveBeenCalled();
 });
 
-test('Common.deferred: reject', () => {
+test('Common.deferred: reject', async () => {
   const defer = deferred();
 
   const success = jest.fn();
@@ -28,10 +28,12 @@ test('Common.deferred: reject', () => {
     .then(() => success())
     .catch(() => fail());
 
-  defer.resolve();
+  try {
+    defer.reject();
+  } catch (e) {}
 
-  setTimeout(() => {
-    expect(success).not.toHaveBeenCalled();
-    expect(fail).toHaveBeenCalled();
-  }, 0)
+  await new Promise(resolve => setTimeout(resolve, 10));
+
+  expect(success).not.toHaveBeenCalled();
+  expect(fail).toHaveBeenCalled();
 });
