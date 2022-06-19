@@ -1,6 +1,5 @@
 import dirname from './index.js';
 
-
 test('Path.dirname', () => {
   const file = 'file:///' + __filename.split('\\').join('/');
   const dir = dirname({ url: file });
