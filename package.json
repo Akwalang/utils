@@ -26,6 +26,7 @@
     "./directory/readDeep": "./src/directory/readDeep/index.js",
     "./directory/remove": "./src/directory/remove/index.js",
     "./file": "./src/file/index.js",
+    "./file/isExists": "./src/file/isExists/index.js",
     "./file/read": "./src/file/read/index.js",
     "./file/remove": "./src/file/remove/index.js",
     "./file/write": "./src/file/write/index.js",
