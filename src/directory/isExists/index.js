@@ -1,14 +1,10 @@
-import fs from 'fs/promises';
-
-import resolve from '../../path/resolve/index.js';
+import stat from '../../path/stat/index.js';
 
 export default async function isExists(...target) {
-  target = resolve(target);
-
   try {
-    const stat = await fs.lstat(target);
+    const stt = await stat(target);
 
-    return stat.isDirectory();
+    return stt.isDirectory();
   } catch (e) {
     return false;
   }
