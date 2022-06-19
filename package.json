@@ -20,6 +20,7 @@
     "./common/tokenGenerator": "./src/common/tokenGenerator/index.js"
   },
   "scripts": {
+    "create-imports": "node ./scripts/create-imports/index.js",
     "create-module": "node ./scripts/create-module/index.js",
     "test": "jest ./src"
   },
