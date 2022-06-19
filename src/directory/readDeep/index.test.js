@@ -1,7 +1,13 @@
-import read from './index.js';
+import readDeep from './index.js';
+
+import resolve from '../../path/resolve/index.js';
 
 test('Directory.readDeep', async () => {
-  const files = await read(__dirname);
+  const files = await readDeep(__dirname);
 
-  expect(files).toEqual(['index.d.ts', 'index.js', 'index.test.js']);
+  expect(files).toEqual([
+    resolve(__dirname, 'index.d.ts'),
+    resolve(__dirname, 'index.js'),
+    resolve(__dirname, 'index.test.js'),
+  ]);
 });
