@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 
 import resolve from '../../path/resolve/index.js';
-import isObject from '../../types/isObject/index.js';
+import isObject from '../../is/object/index.js';
 
 const DEFAULTS = {
   encoding: 'utf8',
