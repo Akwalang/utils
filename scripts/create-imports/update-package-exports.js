@@ -1,9 +1,12 @@
 import readFile from '../../src/file/read/index.js';
 import writeFile from '../../src/file/write/index.js';
 
+import readDeepDir from '../../src/directory/readDeep/index.js';
 import createSorter from '../../src/array/createSorter/index.js';
 
-export default async function updatePackageExports(root, list) {
+export default async function updatePackageExports(root, src) {
+  const list = await readDeepDir(src);
+
   let content = await readFile(root, 'package.json');
 
   const files = list

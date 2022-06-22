@@ -1,6 +1,9 @@
 import writeFile from '../../src/file/write/index.js';
+import readDeepDir from '../../src/directory/readDeep/index.js';
 
-export default async function createModuleImports(root, list) {
+export default async function createModuleImports(root, src) {
+  const list = await readDeepDir(src);
+
   const files = list
     .map(item => item.replace(root, ''))
     .filter(item => item.endsWith('index.js'))
