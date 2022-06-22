@@ -1,7 +1,7 @@
-import replace from './index.js';
+import template from './index.js';
 
-test('String.replace: top level', () => {
-  const result = replace(
+test('String.template: top level', () => {
+  const result = template(
     'test <%= 123 %> text <%= name %>! <%= missing %>',
     { '123': 'number', name: 'string' }
   );
@@ -9,8 +9,8 @@ test('String.replace: top level', () => {
   expect(result).toEqual('test number text string! <%= missing %>');
 });
 
-test('String.replace: nested level', () => {
-  const result = replace(
+test('String.template: nested level', () => {
+  const result = template(
     'test <%= nest.123 %> text <%= nest.name %>! <%= nest.missing %>',
     {
       nest: { '123': 'number', name: 'string' },

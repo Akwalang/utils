@@ -7,7 +7,7 @@ import writeFile from '../../src/file/write/index.js';
 import args from '../../src/process/args/index.js';
 import resolve from '../../src/path/resolve/index.js';
 import dirname from '../../src/path/dirname/index.js';
-import replace from '../../src/string/replace/index.js';
+import template from '../../src/string/template/index.js';
 import capitalize from '../../src/string/capitalize/index.js';
 
 const __dirname = dirname(import.meta);
@@ -38,7 +38,7 @@ if (exists) {
 
 const stack = tpls.map(tpl => {
   const fileName = resolve(rootDir, tpl.name.slice(0, -4));
-  const content = replace(tpl.template, { module: { name: capitalize(name), method } });
+  const content = template(tpl.template, { module: { name: capitalize(name), method } });
 
   return writeFile(fileName, content);
 });
