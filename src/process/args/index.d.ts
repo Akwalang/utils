@@ -1,3 +1,3 @@
-declare function args(value?: any): {} | string;
+declare function args(data?: string[]): {};
 
 export default args;
