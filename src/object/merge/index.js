@@ -1,4 +1,4 @@
-import isObject from '../../is/object';
+import isObject from '../../is/object/index.js';
 
 export default function merge(dest, src) {
   for (let name in src) {

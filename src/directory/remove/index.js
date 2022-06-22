@@ -1,11 +1,11 @@
 import fs from 'fs/promises';
 
-import resolve from '../../path/resolve'
-import stat from '../../path/stat'
+import resolve from '../../path/resolve/index.js'
+import stat from '../../path/stat/index.js'
 
 import removeFile from '../../file/remove/index.js';
 
-import read from '../read';
+import read from '../read/index.js';
 
 export default async function remove(...path) {
   path = resolve(path);
