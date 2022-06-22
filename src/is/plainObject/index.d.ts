@@ -1,3 +1,3 @@
-declare function plainObject(value: any): value is Object;
+declare function isPlainObject(value: any): value is Object;
 
-export default plainObject;
+export default isPlainObject;

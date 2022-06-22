@@ -1,3 +1,3 @@
-export default function date(value) {
+export default function isDate(value) {
   return value instanceof Date;
 }

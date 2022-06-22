@@ -1,3 +1,3 @@
-declare function date(value: any): value is Date;
+declare function isDate(value: any): value is Date;
 
-export default date;
+export default isDate;
