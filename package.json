@@ -59,14 +59,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ReMonkey/utils.git"
+    "url": "git+https://github.com/LEroyGGG/utils.git"
   },
   "author": "LEroyGGG",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ReMonkey/utils/issues"
+    "url": "https://github.com/LEroyGGG/utils/issues"
   },
-  "homepage": "https://github.com/ReMonkey/utils#readme",
+  "homepage": "https://github.com/LEroyGGG/utils#readme",
   "type": "module",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
