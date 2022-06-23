@@ -22,7 +22,7 @@ for (let i = 0, len = files.length; i < len; i++) {
   tpls.push({ name: files[i], template });
 }
 
-const [name, method] = args('name').split('.');
+const [name, method] = args().name.split('.');
 
 if (!name || !method) {
   throw new Error('Module and Method names should be written in format "module.method"');
