@@ -15,7 +15,7 @@
     "./common": "./src/common/index.js",
     "./common/deferred": "./src/common/deferred/index.js",
     "./common/idGenerator": "./src/common/idGenerator/index.js",
-    "./common/parse": "./src/common/parse/index.js",
+    "./common/jsonParse": "./src/common/jsonParse/index.js",
     "./common/setAsyncTimeout": "./src/common/setAsyncTimeout/index.js",
     "./common/tokenGenerator": "./src/common/tokenGenerator/index.js",
     "./debug": "./src/debug/index.js",
@@ -53,6 +53,7 @@
     "./path/stat": "./src/path/stat/index.js",
     "./process": "./src/process/index.js",
     "./process/args": "./src/process/args/index.js",
+    "./process/getStack": "./src/process/getStack/index.js",
     "./string": "./src/string/index.js",
     "./string/capitalize": "./src/string/capitalize/index.js",
     "./string/capitalizeAll": "./src/string/capitalizeAll/index.js",
@@ -79,8 +80,5 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
     "jest": "^28.1.1"
-  },
-  "dependencies": {
-    "callsite": "^1.0.0"
   }
 }
