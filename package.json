@@ -80,6 +80,7 @@
     "./types/get": "./src/types/get/index.js"
   },
   "scripts": {
+    "build-docs": "node ./scripts/build-docs/index.js",
     "check-exports": "node ./scripts/check-exports/index.js",
     "create-imports": "node ./scripts/create-imports/index.js",
     "create-module": "node ./scripts/create-module/index.js",
