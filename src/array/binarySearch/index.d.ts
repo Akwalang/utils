@@ -1,6 +1,6 @@
-type Comparator<T, V> = (a: T, b: V) => boolean;
+type Comparator<T> = (item: T) => boolean;
 type Side = -1 | 0 | 1;
 
-declare function binarySearch<T, V>(array: T[], value: V, comparator: Comparator<T, V>, side: Side): number;
+declare function binarySearch<T>(array: T[], value: any | Comparator<T>, side: Side): number;
 
 export default binarySearch;
