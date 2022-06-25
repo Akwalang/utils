@@ -1,4 +1,4 @@
-import isFunction from '../../is/function';
+import isFunction from '../../is/function/index.js';
 
 import { DEFAULT_COMPARATOR } from '../utils.js';
 

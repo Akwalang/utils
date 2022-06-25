@@ -1,6 +1,7 @@
 export { default as assign } from './assign/index.js';
 export { default as binarySearch } from './binarySearch/index.js';
 export { default as chunk } from './chunk/index.js';
+export { default as combine } from './combine/index.js';
 export { default as create } from './create/index.js';
 export { default as createSorter } from './createSorter/index.js';
 export { default as deduplicate } from './deduplicate/index.js';
@@ -9,3 +10,4 @@ export { default as difference } from './difference/index.js';
 export { default as intersection } from './intersection/index.js';
 export { default as matchRange } from './matchRange/index.js';
 export { default as shuffle } from './shuffle/index.js';
+export { default as union } from './union/index.js';
