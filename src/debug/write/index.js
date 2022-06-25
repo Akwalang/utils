@@ -16,7 +16,5 @@ export default function write(data, name) {
 
   const target = `${name}.__debug__.json`;
 
-  console.log([dir, target]);
-
   return writeFile([dir, target], JSON.stringify(data, null, '  '));
 }

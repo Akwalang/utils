@@ -9,7 +9,7 @@ test('Common.random', () => {
   const from = 10;
   const to = 19;
   const count = to - from + 1;
-  const tries = 10_000_000;
+  const tries = 100_000;
 
   for (let i = 0; i < tries; i++) {
     const value = random(from, to, true);
@@ -23,8 +23,6 @@ test('Common.random', () => {
   const diff = difference(numbers, create(from, to));
 
   const deviations = matchRange(counters, [0, 0]).map(v => Math.abs(v - tries / count) / tries / count * 100);
-
-  console.log(result);
 
   const deviation = Math.max(...deviations);
 
