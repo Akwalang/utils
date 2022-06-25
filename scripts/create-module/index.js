@@ -1,3 +1,6 @@
+import chalk from 'chalk';
+import prompt from 'prompt';
+
 import readDir from '../../src/directory/read/index.js';
 import isExistsDir from '../../src/directory/isExists/index.js';
 
@@ -22,7 +25,35 @@ for (let i = 0, len = files.length; i < len; i++) {
   tpls.push({ name: files[i], template });
 }
 
-const [name, method] = args().name.split('.');
+let module = args().name;
+
+if (!module) {
+  const schema = {
+    properties: {
+      name: {
+        description: 'Module name',
+        pattern: /^\s*[a-z\d]+\.[a-z\d]+\s*$/i,
+        message: 'Invalid module name. Module and Method names should be written in format "module.method"',
+        required: true
+      },
+    }
+  };
+
+  module = await new Promise((resolve) => {
+    prompt.start();
+
+    prompt.get(schema, function (err, result) {
+      if (err) {
+        console.log('Incorrect module name: ' + chalk.red(result.name));
+        process.exit(2);
+      }
+
+      resolve(result.name);
+    });
+  });
+}
+
+const [name, method] = module.split('.');
 
 if (!name || !method) {
   throw new Error('Module and Method names should be written in format "module.method"');
