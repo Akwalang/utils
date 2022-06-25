@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 
-import resolve from '../../path/resolve/index.js'
-import stat from '../../path/stat/index.js'
+import resolve from '../../path/resolve/index.js';
+import stat from '../../path/stat/index.js';
 
 import removeFile from '../../file/remove/index.js';
 

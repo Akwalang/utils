@@ -1,7 +1,7 @@
 import create from './index.js';
 import remove from '../remove/index.js';
 
-import stat from '../../path/stat';
+import stat from '../../path/stat/index.js';
 
 test('Directory.create', async () => {
   await create(__dirname, 'qwerty', 'asd', '123');
