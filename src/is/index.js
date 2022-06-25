@@ -1,9 +1,11 @@
 export { default as array } from './array/index.js';
 export { default as asyncFunction } from './asyncFunction/index.js';
 export { default as date } from './date/index.js';
+export { default as empty } from './empty/index.js';
 export { default as equal } from './equal/index.js';
 export { default as function } from './function/index.js';
 export { default as nan } from './nan/index.js';
+export { default as nil } from './nil/index.js';
 export { default as null } from './null/index.js';
 export { default as number } from './number/index.js';
 export { default as object } from './object/index.js';
