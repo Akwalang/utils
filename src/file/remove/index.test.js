@@ -1,7 +1,7 @@
 import write from '../write/index.js';
 import remove from './index.js';
 
-import stat from '../../path/stat';
+import stat from '../../path/stat/index.js';
 
 test('File.remove: remove file', async () => {
   await write([__dirname, 'test-file.txt'], 'Some test text');
