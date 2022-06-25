@@ -12,6 +12,18 @@ test('Array.binarySearch: first half', () => {
   expect(result).toBe(3);
 });
 
+test('Array.binarySearch: first half fist item', () => {
+  const result = binarySearch([1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9], 4, -1);
+
+  expect(result).toBe(8);
+});
+
+test('Array.binarySearch: first half last item', () => {
+  const result = binarySearch([1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9], 4, 1);
+
+  expect(result).toBe(11);
+});
+
 test('Array.binarySearch: second half', () => {
   const result = binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 8);
 

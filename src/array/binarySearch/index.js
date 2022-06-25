@@ -10,7 +10,7 @@ const createComparator = value => item => {
 
 const middle = (from, to) => Math.floor((from + to) / 2);
 
-export default function binarySearch(array, value) {
+export default function binarySearch(array, value, side = 0) {
   let from = 0;
   let to = array.length - 1;
 
@@ -23,6 +23,8 @@ export default function binarySearch(array, value) {
     throw new Error('array.binarySearch: comparator should return number value');
   }
 
+  let result = -1;
+
   while (from <= to) {
     const idx = middle(from, to);
 
@@ -30,11 +32,17 @@ export default function binarySearch(array, value) {
 
     if (isNaN(+r)) break;
 
-    if (r === 0) return idx;
+    if (r === 0) {
+      result = idx;
 
-    if (r > 0) from = idx + 1;
-    if (r < 0) to = idx - 1;
+      if (side < 0) to = idx - 1;
+      else if (side > 0) from = idx + 1;
+      else break;
+    }
+
+    else if (r > 0) from = idx + 1;
+    else if (r < 0) to = idx - 1;
   }
 
-  return -1;
+  return result;
 }
