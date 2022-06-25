@@ -9,6 +9,7 @@
     "./array/assign": "./src/array/assign/index.js",
     "./array/binarySearch": "./src/array/binarySearch/index.js",
     "./array/chunk": "./src/array/chunk/index.js",
+    "./array/combine": "./src/array/combine/index.js",
     "./array/create": "./src/array/create/index.js",
     "./array/createSorter": "./src/array/createSorter/index.js",
     "./array/deduplicate": "./src/array/deduplicate/index.js",
@@ -17,12 +18,14 @@
     "./array/intersection": "./src/array/intersection/index.js",
     "./array/matchRange": "./src/array/matchRange/index.js",
     "./array/shuffle": "./src/array/shuffle/index.js",
+    "./array/union": "./src/array/union/index.js",
     "./common": "./src/common/index.js",
     "./common/deferred": "./src/common/deferred/index.js",
     "./common/idGenerator": "./src/common/idGenerator/index.js",
     "./common/jsonParse": "./src/common/jsonParse/index.js",
     "./common/random": "./src/common/random/index.js",
     "./common/setAsyncTimeout": "./src/common/setAsyncTimeout/index.js",
+    "./common/throttle": "./src/common/throttle/index.js",
     "./common/tokenGenerator": "./src/common/tokenGenerator/index.js",
     "./debug": "./src/debug/index.js",
     "./debug/write": "./src/debug/write/index.js",
@@ -42,9 +45,11 @@
     "./is/array": "./src/is/array/index.js",
     "./is/asyncFunction": "./src/is/asyncFunction/index.js",
     "./is/date": "./src/is/date/index.js",
+    "./is/empty": "./src/is/empty/index.js",
     "./is/equal": "./src/is/equal/index.js",
     "./is/function": "./src/is/function/index.js",
     "./is/nan": "./src/is/nan/index.js",
+    "./is/nil": "./src/is/nil/index.js",
     "./is/null": "./src/is/null/index.js",
     "./is/number": "./src/is/number/index.js",
     "./is/object": "./src/is/object/index.js",
@@ -75,6 +80,7 @@
     "./types/get": "./src/types/get/index.js"
   },
   "scripts": {
+    "check-exports": "node ./scripts/check-exports/index.js",
     "create-imports": "node ./scripts/create-imports/index.js",
     "create-module": "node ./scripts/create-module/index.js",
     "test": "jest ./src"
@@ -92,6 +98,7 @@
   "type": "module",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "chalk": "^5.0.1",
     "jest": "^28.1.1"
   }
 }
