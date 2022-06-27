@@ -1,5 +1,5 @@
-export default function param(content) {
-  let md = ``;
+export default function tplParam(content) {
+  let md = `**Params:**\n\n`;
 
   md += content.items.map(item => {
     let res = `* **${item.name}**: ${item.type} `;
@@ -12,6 +12,8 @@ export default function param(content) {
 
     return res;
   }).join('\n');
+
+  md += '\n';
 
   return md;
 };

@@ -1,6 +1,6 @@
 import types from '../../types.js';
 
-export default function script(content) {
+export default function tplScript(content) {
   const type = {
     [types.SCRIPT_JS]: 'javascript',
     [types.SCRIPT_JSON]: 'json',
