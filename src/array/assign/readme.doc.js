@@ -2,6 +2,22 @@ export default (pkg, meta, types) => ({
   title: 'array.assign',
   sections: [
     {
+      type: types.SECTION_IMPORT,
+      title: 'Import',
+      content: [
+        {
+          type: types.CONTENT_SCRIPT,
+          script: {
+            type: types.SCRIPT_JS,
+            content: `import assign from '${meta.npm.name}/array/assign';`,
+          },
+        },
+      ],
+    },
+    {
+      type: types.SECTION_USAGE,
+    },
+    {
       type: types.SECTION_DESCRIPTION,
       title: 'assign(source, getter[, accumulator = {}])',
       content: [
@@ -34,19 +50,6 @@ export default (pkg, meta, types) => ({
             type: 'Record<string | number | symbol, any>',
             description: 'object extended by all returned values',
             defaultValue: '{}',
-          },
-        },
-      ],
-    },
-    {
-      type: types.SECTION_IMPORT,
-      title: 'Import',
-      content: [
-        {
-          type: types.CONTENT_SCRIPT,
-          script: {
-            type: types.SCRIPT_JS,
-            content: `import assign from '${meta.npm.name}/array/assign';`,
           },
         },
       ],

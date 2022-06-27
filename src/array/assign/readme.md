@@ -1,6 +1,14 @@
 ## array.assign
 
-#### assign(source, getter _[, accumulator = {}]_)
+```javascript
+import assign from '@utils/array/assign';
+```
+
+### Usage
+
+```javascript
+assign(source, getter[, accumulator = {}])
+```
 
 **Params:**
 
@@ -11,12 +19,6 @@
 **Return:**
 
 * Record<string | number | symbol, any> _[default: {}]_ - object extended by all returned values
-
-#### Import
-
-```javascript
-import assign from '@utils/array/assign';
-```
 
 #### Example
 

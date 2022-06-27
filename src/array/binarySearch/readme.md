@@ -1,6 +1,14 @@
 ## array.binarySearch
 
-#### binarySearch(array, value _[, side = 0]_)
+```javascript
+import binarySearch from '@utils/array/binarySearch';
+```
+
+### Usage
+
+```javascript
+binarySearch(array, value[, side = 0])
+```
 
 **Params:**
 
@@ -11,12 +19,6 @@
 **Return:**
 
 * number _[default: -1]_ - index of value in array
-
-#### Import
-
-```javascript
-import binarySearch from '@utils/array/binarySearch';
-```
 
 #### Example
 

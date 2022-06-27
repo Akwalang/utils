@@ -1,6 +1,14 @@
 ## array.chunk
 
-#### chunk(array, size)
+```javascript
+import chunk from '@utils/array/chunk';
+```
+
+### Usage
+
+```javascript
+chunk(array, size)
+```
 
 **Params:**
 
@@ -10,12 +18,6 @@
 **Return:**
 
 * T[][] - array of arrays with income array values and setup length
-
-#### Import
-
-```javascript
-import chunk from '@utils/array/chunk';
-```
 
 #### Example
 

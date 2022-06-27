@@ -2,6 +2,22 @@ export default (pkg, meta, types) => ({
   title: 'array.chunk',
   sections: [
     {
+      type: types.SECTION_IMPORT,
+      title: 'Import',
+      content: [
+        {
+          type: types.CONTENT_SCRIPT,
+          script: {
+            type: types.SCRIPT_JS,
+            content: `import chunk from '${meta.npm.name}/array/chunk';`,
+          },
+        },
+      ],
+    },
+    {
+      type: types.SECTION_USAGE,
+    },
+    {
       type: types.SECTION_DESCRIPTION,
       title: 'chunk(array, size)',
       content: [
@@ -28,19 +44,6 @@ export default (pkg, meta, types) => ({
             type: 'T[][]',
             description: 'array of arrays with income array values and setup length',
             defaultValue: null,
-          },
-        },
-      ],
-    },
-    {
-      type: types.SECTION_IMPORT,
-      title: 'Import',
-      content: [
-        {
-          type: types.CONTENT_SCRIPT,
-          script: {
-            type: types.SCRIPT_JS,
-            content: `import chunk from '${meta.npm.name}/array/chunk';`,
           },
         },
       ],

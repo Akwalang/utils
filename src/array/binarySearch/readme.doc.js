@@ -2,6 +2,22 @@ export default (pkg, meta, types) => ({
   title: 'array.binarySearch',
   sections: [
     {
+      type: types.SECTION_IMPORT,
+      title: 'Import',
+      content: [
+        {
+          type: types.CONTENT_SCRIPT,
+          script: {
+            type: types.SCRIPT_JS,
+            content: `import binarySearch from '${meta.npm.name}/array/binarySearch';`,
+          },
+        },
+      ],
+    },
+    {
+      type: types.SECTION_USAGE,
+    },
+    {
       type: types.SECTION_DESCRIPTION,
       title: 'binarySearch(array, value[, side = 0])',
       content: [
@@ -34,19 +50,6 @@ export default (pkg, meta, types) => ({
             type: 'number',
             description: 'index of value in array',
             defaultValue: '-1',
-          },
-        },
-      ],
-    },
-    {
-      type: types.SECTION_IMPORT,
-      title: 'Import',
-      content: [
-        {
-          type: types.CONTENT_SCRIPT,
-          script: {
-            type: types.SCRIPT_JS,
-            content: `import binarySearch from '${meta.npm.name}/array/binarySearch';`,
           },
         },
       ],

@@ -2,6 +2,22 @@ export default (pkg, meta, types) => ({
   title: 'array.combine',
   sections: [
     {
+      type: types.SECTION_IMPORT,
+      title: 'Import',
+      content: [
+        {
+          type: types.CONTENT_SCRIPT,
+          script: {
+            type: types.SCRIPT_JS,
+            content: `import combine from '${meta.npm.name}/array/combine';`,
+          },
+        },
+      ],
+    },
+    {
+      type: types.SECTION_USAGE,
+    },
+    {
       type: types.SECTION_DESCRIPTION,
       title: 'combine(keys, values)',
       content: [
@@ -28,19 +44,6 @@ export default (pkg, meta, types) => ({
             type: 'Record<string | number | symbol, any>',
             description: 'object with first array values as keys and second array values as values',
             defaultValue: null,
-          },
-        },
-      ],
-    },
-    {
-      type: types.SECTION_IMPORT,
-      title: 'Import',
-      content: [
-        {
-          type: types.CONTENT_SCRIPT,
-          script: {
-            type: types.SCRIPT_JS,
-            content: `import combine from '${meta.npm.name}/array/combine';`,
           },
         },
       ],
