@@ -1,3 +1,9 @@
+import isArray from '../../is/array/index.js';
+import isString from '../../is/string/index.js';
+import isFunction from '../../is/function/index.js';
+
+import getter from '../../object/getter/index.js';
+
 const SORTER_COMPARATOR = (a, b, m) => {
   if (a > b) return  1 * m;
   if (a < b) return -1 * m;
@@ -5,39 +11,46 @@ const SORTER_COMPARATOR = (a, b, m) => {
   return 0;
 };
 
-export default function createSorter(keys = null, dirs = ['asc']) {
-  dirs = Array.isArray(dirs) ? dirs : dirs.split(',');
+const createGetter = (field) =>
+  field.includes('.') || field.includes('[')
+    ? item => getter(item, field)
+    : item => item[field];
 
-  const mult = dirs.map(dir => ({ asc: 1 , desc: -1 }[dir.trim()] || 1));
+export default function createSorter(keys = null, dirs = 'asc') {
+  dirs = isArray(dirs) ? dirs : dirs.split(',');
+
+  const multiplier = dirs.map(dir => ({ asc: 1 , desc: -1 }[dir.trim()] || 1));
 
   if (keys === null) {
-    return (a, b) => SORTER_COMPARATOR(a, b, mult[0]);
+    return (a, b) => SORTER_COMPARATOR(a, b, multiplier[0]);
   }
 
   let fields = [];
 
-  if (typeof keys === 'function') {
-    fields = [keys];
+  if (isFunction(keys)) {
+    fields = [(a, b) => keys(a, b) * multiplier];
   }
 
-  if (typeof keys === 'string') {
+  if (isString(keys)) {
     const items = keys.split(',').map(f => f.trim());
 
-    fields = items.map(field => item => item[field]);
+    fields = items.map(createGetter);
   }
 
-  if (Array.isArray(keys)) {
-    fields = keys.map(field => ({
-      string: item => item[field],
-      function: field,
-    }[typeof field] || (() => 0)));
+  if (isArray(keys)) {
+    fields = keys.map(field => {
+      if (isString(field)) return createGetter(field);
+      if (isFunction(field)) return field;
+
+      return () => 0;
+    });
   }
 
   return (a, b) => {
     let result = 0;
 
     for (let field, i = 0; field = fields[i]; i++) {
-      result = SORTER_COMPARATOR(field(a), field(b), mult[i] || mult[0]);
+      result = SORTER_COMPARATOR(field(a), field(b), multiplier[i] || multiplier[0]);
 
       if (result) break;
     }
