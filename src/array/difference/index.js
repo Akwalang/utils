@@ -1,7 +1,9 @@
 import { DEFAULT_COMPARATOR } from '../utils.js';
 
-export default function difference(a, b, getter = DEFAULT_COMPARATOR) {
-  const comparator = getter.length === 2 ? getter : (a, b) => getter(a) === getter(b);
+export default function difference(a, b, comparator = DEFAULT_COMPARATOR) {
+  const compare = comparator.length === 2
+    ? comparator
+    : (a, b) => DEFAULT_COMPARATOR(comparator(a), comparator(b));
 
-  return a.filter(av => !b.find(bv => comparator(av, bv)));
+  return a.filter(av => !b.find(bv => compare(av, bv)));
 };
