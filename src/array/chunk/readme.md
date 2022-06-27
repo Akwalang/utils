@@ -1,5 +1,7 @@
 ## array.chunk
 
+Slice array on list of arrays with setup length.
+
 ```javascript
 import chunk from '@utils/array/chunk';
 ```

@@ -1,5 +1,7 @@
 ## array.combine
 
+Create object based on 2 arrays: keys and values.
+
 ```javascript
 import combine from '@utils/array/combine';
 ```

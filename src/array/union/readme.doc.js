@@ -1,5 +1,5 @@
 export default (pkg, meta, types) => ({
-  title: 'array.combine',
+  title: 'array.union',
   sections: [
     {
       type: types.SECTION_PARAGRAPH,
@@ -7,7 +7,7 @@ export default (pkg, meta, types) => ({
         {
           type: types.CONTENT_PARAGRAPH,
           items: [
-            { text: `Create object based on 2 arrays: keys and values.` },
+            { text: `Concat arrays into one and remove duplicate items` },
           ],
         },
       ],
@@ -20,7 +20,7 @@ export default (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import combine from '${meta.npm.name}/array/combine';`,
+            content: `import union from '${meta.npm.name}/array/union';`,
           },
         },
       ],
@@ -30,31 +30,29 @@ export default (pkg, meta, types) => ({
     },
     {
       type: types.SECTION_DESCRIPTION,
-      title: 'combine(keys, values)',
+      title: 'union([comparator = DEFAULT_COMPARATOR, ]...arrays)',
       content: [
         {
           type: types.CONTENT_PARAMS,
           items: [
             {
-              name: 'keys',
-              type: '(string | number | symbol)[]',
-              description: 'array of keys',
-              defaultValue: null,
+              name: 'comparator',
+              type: '(a: T, b: T) => boolean',
+              description: 'function to compare values',
+              defaultValue: '(a, b) => a === b || isNaN(a) && isNaN(b)',
             },
             {
-              name: 'values',
-              type: 'any[]',
-              description: 'array of values',
-              defaultValue: null,
+              name: 'arrays',
+              type: 'T[][]',
+              description: 'arrays of values',
             },
           ],
         },
         {
           type: types.CONTENT_RETURN,
           result: {
-            type: 'Record<string | number | symbol, any>',
-            description: 'object with first array values as keys and second array values as values',
-            defaultValue: null,
+            type: 'T[]',
+            description: 'Joined array with unique items',
           },
         },
       ],
@@ -68,10 +66,13 @@ export default (pkg, meta, types) => ({
           script: {
             type: types.SCRIPT_JS,
             content: `
-              combine(
-                ['first', 'second', 'third'],
-                [1, null, true, 'mismatch value']
-              );
+              const a = [{ value: 1 }, { value: 2 }, { value: 3 }];
+              const b = [{ value: 3 }, { value: 1 }, { value: 4 }];
+              const c = [{ value: 4 }, { value: 4 }, { value: 3 }, { value: 2 }, { value: 5 }];
+
+              const comparator = (a, b) => a.value === b.value;
+
+              union(comparator, a, b, c);
             `,
           },
         },
@@ -86,7 +87,7 @@ export default (pkg, meta, types) => ({
           script: {
             type: types.SCRIPT_JSON,
             content: `
-              { "first": 1, "second": null, "third": true }
+              [{ "value": 1 }, { "value": 2 }, { "value": 3 }, { "value": 4 }, { "value": 5 }]
             `,
           },
         },

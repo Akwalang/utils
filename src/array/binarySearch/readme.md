@@ -1,5 +1,7 @@
 ## array.binarySearch
 
+Search element in sorted array using binary search algorithm.
+
 ```javascript
 import binarySearch from '@utils/array/binarySearch';
 ```

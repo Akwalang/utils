@@ -2,6 +2,17 @@ export default (pkg, meta, types) => ({
   title: 'array.createSorter',
   sections: [
     {
+      type: types.SECTION_PARAGRAPH,
+      content: [
+        {
+          type: types.CONTENT_PARAGRAPH,
+          items: [
+            { text: `Create sorter function which can be passed into array.prototype.sort method.` },
+          ],
+        },
+      ],
+    },
+    {
       type: types.SECTION_IMPORT,
       title: 'Import',
       content: [

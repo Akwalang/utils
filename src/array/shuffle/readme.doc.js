@@ -1,5 +1,5 @@
 export default (pkg, meta, types) => ({
-  title: 'array.combine',
+  title: 'array.shuffle',
   sections: [
     {
       type: types.SECTION_PARAGRAPH,
@@ -7,7 +7,7 @@ export default (pkg, meta, types) => ({
         {
           type: types.CONTENT_PARAGRAPH,
           items: [
-            { text: `Create object based on 2 arrays: keys and values.` },
+            { text: `Shuffle array items` },
           ],
         },
       ],
@@ -20,7 +20,7 @@ export default (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import combine from '${meta.npm.name}/array/combine';`,
+            content: `import shuffle from '${meta.npm.name}/array/shuffle';`,
           },
         },
       ],
@@ -30,31 +30,23 @@ export default (pkg, meta, types) => ({
     },
     {
       type: types.SECTION_DESCRIPTION,
-      title: 'combine(keys, values)',
+      title: 'shuffle(array)',
       content: [
         {
           type: types.CONTENT_PARAMS,
           items: [
             {
-              name: 'keys',
-              type: '(string | number | symbol)[]',
-              description: 'array of keys',
-              defaultValue: null,
-            },
-            {
-              name: 'values',
-              type: 'any[]',
+              name: 'array',
+              type: 'T[]',
               description: 'array of values',
-              defaultValue: null,
             },
           ],
         },
         {
           type: types.CONTENT_RETURN,
           result: {
-            type: 'Record<string | number | symbol, any>',
-            description: 'object with first array values as keys and second array values as values',
-            defaultValue: null,
+            type: 'T[]',
+            description: 'array with shuffled items',
           },
         },
       ],
@@ -68,10 +60,7 @@ export default (pkg, meta, types) => ({
           script: {
             type: types.SCRIPT_JS,
             content: `
-              combine(
-                ['first', 'second', 'third'],
-                [1, null, true, 'mismatch value']
-              );
+              shuffle([1, 2, 3, 4, 5, 6]);
             `,
           },
         },
@@ -86,7 +75,7 @@ export default (pkg, meta, types) => ({
           script: {
             type: types.SCRIPT_JSON,
             content: `
-              { "first": 1, "second": null, "third": true }
+              [4, 3, 5, 6, 1, 2]
             `,
           },
         },

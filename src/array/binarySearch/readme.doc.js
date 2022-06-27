@@ -2,6 +2,17 @@ export default (pkg, meta, types) => ({
   title: 'array.binarySearch',
   sections: [
     {
+      type: types.SECTION_PARAGRAPH,
+      content: [
+        {
+          type: types.CONTENT_PARAGRAPH,
+          items: [
+            { text: `Search element in sorted array using binary search algorithm.` },
+          ],
+        },
+      ],
+    },
+    {
       type: types.SECTION_IMPORT,
       title: 'Import',
       content: [

@@ -2,6 +2,17 @@ export default (pkg, meta, types) => ({
   title: 'array.chunk',
   sections: [
     {
+      type: types.SECTION_PARAGRAPH,
+      content: [
+        {
+          type: types.CONTENT_PARAGRAPH,
+          items: [
+            { text: `Slice array on list of arrays with setup length.` },
+          ],
+        },
+      ],
+    },
+    {
       type: types.SECTION_IMPORT,
       title: 'Import',
       content: [

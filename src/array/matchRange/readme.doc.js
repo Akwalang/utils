@@ -1,5 +1,5 @@
 export default (pkg, meta, types) => ({
-  title: 'array.combine',
+  title: 'array.matchRange',
   sections: [
     {
       type: types.SECTION_PARAGRAPH,
@@ -7,7 +7,7 @@ export default (pkg, meta, types) => ({
         {
           type: types.CONTENT_PARAGRAPH,
           items: [
-            { text: `Create object based on 2 arrays: keys and values.` },
+            { text: `Calculate range of values based on items in the passed array` },
           ],
         },
       ],
@@ -20,7 +20,7 @@ export default (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import combine from '${meta.npm.name}/array/combine';`,
+            content: `import matchRange from '${meta.npm.name}/array/matchRange';`,
           },
         },
       ],
@@ -30,31 +30,35 @@ export default (pkg, meta, types) => ({
     },
     {
       type: types.SECTION_DESCRIPTION,
-      title: 'combine(keys, values)',
+      title: 'matchRange(array[, fallback = [null, null] [, getValue = v => v]])',
       content: [
         {
           type: types.CONTENT_PARAMS,
           items: [
             {
-              name: 'keys',
-              type: '(string | number | symbol)[]',
-              description: 'array of keys',
-              defaultValue: null,
+              name: 'array',
+              type: 'any',
+              description: 'array of values',
             },
             {
-              name: 'values',
-              type: 'any[]',
-              description: 'array of values',
-              defaultValue: null,
+              name: 'fallback',
+              type: 'F extends any',
+              description: 'return value in case of passed empty array',
+              defaultValue: '[null, null]',
+            },
+            {
+              name: 'getValue',
+              type: '(v: any) => number',
+              description: 'function return value to compare',
+              defaultValue: 'v => v',
             },
           ],
         },
         {
           type: types.CONTENT_RETURN,
           result: {
-            type: 'Record<string | number | symbol, any>',
-            description: 'object with first array values as keys and second array values as values',
-            defaultValue: null,
+            type: '[number, number] | F',
+            description: 'array with min and max value or fallback argument in case of empty array',
           },
         },
       ],
@@ -68,10 +72,9 @@ export default (pkg, meta, types) => ({
           script: {
             type: types.SCRIPT_JS,
             content: `
-              combine(
-                ['first', 'second', 'third'],
-                [1, null, true, 'mismatch value']
-              );
+              const list = [{ value: 57 }, { value: 41 }, { value: 9 }, { value: 93 }, { value: 12 }];
+
+              matchRange(list, null, item => item.value);
             `,
           },
         },
@@ -86,7 +89,7 @@ export default (pkg, meta, types) => ({
           script: {
             type: types.SCRIPT_JSON,
             content: `
-              { "first": 1, "second": null, "third": true }
+              [9, 93]
             `,
           },
         },
