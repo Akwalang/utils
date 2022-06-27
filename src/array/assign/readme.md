@@ -2,9 +2,15 @@
 
 #### assign(source, getter _[, accumulator = {}]_)
 
+**Params:**
+
 * **source**: T[] - array of source data
 * **getter**: (item: T, index: number) => {} - function calling on every item. It should return object which will be assigned to accumulator
 * **accumulator**: Record<any, any> _[default: {}]_ - object accumulator
+
+**Return:**
+
+* Record<string | number | symbol, any> _[default: {}]_ - object extended by all returned values
 
 #### Import
 

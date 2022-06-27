@@ -2,7 +2,7 @@ export default (pkg, meta, types) => ({
   title: 'array.assign',
   sections: [
     {
-      type: types.SECTION_PARAMS,
+      type: types.SECTION_DESCRIPTION,
       title: 'assign(source, getter[, accumulator = {}])',
       content: [
         {
@@ -27,6 +27,14 @@ export default (pkg, meta, types) => ({
               defaultValue: '{}',
             },
           ],
+        },
+        {
+          type: types.CONTENT_RETURN,
+          result: {
+            type: 'Record<string | number | symbol, any>',
+            description: 'object extended by all returned values',
+            defaultValue: '{}',
+          },
         },
       ],
     },

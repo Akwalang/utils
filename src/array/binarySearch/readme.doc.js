@@ -2,7 +2,7 @@ export default (pkg, meta, types) => ({
   title: 'array.binarySearch',
   sections: [
     {
-      type: types.SECTION_PARAMS,
+      type: types.SECTION_DESCRIPTION,
       title: 'binarySearch(array, value[, side = 0])',
       content: [
         {
@@ -27,6 +27,14 @@ export default (pkg, meta, types) => ({
               defaultValue: '0',
             },
           ],
+        },
+        {
+          type: types.CONTENT_RETURN,
+          result: {
+            type: 'number',
+            description: 'index of value in array',
+            defaultValue: '-1',
+          },
         },
       ],
     },
