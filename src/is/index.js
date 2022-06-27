@@ -10,4 +10,5 @@ export { default as null } from './null/index.js';
 export { default as number } from './number/index.js';
 export { default as object } from './object/index.js';
 export { default as plainObject } from './plainObject/index.js';
+export { default as string } from './string/index.js';
 export { default as undefined } from './undefined/index.js';
