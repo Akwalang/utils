@@ -1,5 +1,5 @@
-export default function random(lower, upper, round = false) {
-  const value = lower + (upper - lower + 1) * Math.random();
+export default function random(lower, upper, floor = false) {
+  const value = lower + (upper - lower + (floor ? 1 : 0)) * Math.random();
 
-  return round ? Math.floor(value) : value;
+  return floor ? Math.floor(value) : value;
 }

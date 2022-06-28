@@ -1,6 +1,6 @@
-type Callback<T> = (stack: T[][]) => void;
+type Callback<T> = (stack: T[]) => void;
 
-declare function throttle<T>(
+declare function throttle<T extends []>(
   callback: Callback<T>,
   delay: number,
   delayMin?: number,

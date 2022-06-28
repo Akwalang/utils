@@ -2,16 +2,18 @@ export default function throttle(callback, delay, delayMin, delayMax) {
   delayMin = delayMin || delay;
   delayMax = delayMax || delayMin;
 
-  let [start, timer, stack] = [null, null, []];
+  let [start, next, timer, stack] = [null, null, null, []];
 
   const notify = () => {
     callback(stack);
 
-    [start, timer, stack] = [null, null, []];
+    [start, next, timer, stack] = [null, null, null, []];
   };
 
   const throttler = function throttler(...args) {
     stack.push(args);
+
+    if (start + delayMax <= next) return;
 
     const now = +new Date();
 
@@ -20,19 +22,25 @@ export default function throttle(callback, delay, delayMin, delayMax) {
     const elapsed = now - start;
     const remain = delayMax - elapsed;
 
-    const nextDelay = Math.max(delayMin - elapsed, delay);
+    const nextDelay = Math.min(remain, Math.max(delayMin - elapsed, delay));
 
-    if (remain >= nextDelay) {
-      clearTimeout(timer);
+    next = now + nextDelay;
 
-      timer = setTimeout(notify, nextDelay);
-    }
+    clearTimeout(timer);
+
+    timer = setTimeout(notify, nextDelay);
+  };
+
+  throttler.flush = () => {
+    clearTimeout(timer);
+
+    notify();
   };
 
   throttler.destroy = () => {
     clearTimeout(timer);
 
-    [start, timer, stack] = [null, null, []];
+    [start, next, timer, stack] = [null, null, null, []];
   };
 
   return throttler;

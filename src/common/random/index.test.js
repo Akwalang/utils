@@ -4,7 +4,7 @@ import create from '../../array/create/index.js';
 import difference from '../../array/difference/index.js';
 import matchRange from '../../array/matchRange/index.js';
 
-test('Common.random', () => {
+test('Common.random: floor true', () => {
   const result = {};
   const from = 10;
   const to = 19;

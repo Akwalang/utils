@@ -1,4 +1,4 @@
-declare function jsonParse<T, V>(value: V): T | V;
-declare function jsonParse<T, V, F>(value: V, fallback?: F): T | V | F;
+declare function jsonParse<T>(value: string): T | string;
+declare function jsonParse<T, F>(value: string, fallback?: F): T | string | F;
 
 export default jsonParse;
