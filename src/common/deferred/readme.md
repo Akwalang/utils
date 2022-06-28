@@ -35,5 +35,5 @@ await defer;
 #### Result
 
 ```json
-"Some value'
+"Some value"
 ```

@@ -51,23 +51,23 @@ await new Promise((resolve) => {
 
 ```json
 [
-  { time: 463, stack: [[1], [2]] },
-  { time: 1055, stack: [[3], [4], [5]] }
+  { "time": 463, "stack": [[1], [2]] },
+  { "time": 1055, "stack": [[3], [4], [5]] }
 ]
 ```
 
 ### Usage #2
 
 ```javascript
-throttle(callback, delay, minDelay, maxDelay)
+throttle(callback, delay, delayMin, delayMax)
 ```
 
 **Params:**
 
 * **callback**: (stack: T[]) => void - size of token
 * **delay**: number - time in ms
-* **minDelay**: number - min delay in ms
-* **maxDelay**: number - max delay in ms
+* **delayMin**: number - min delay in ms
+* **delayMax**: number - max delay in ms
 
 **Return:**
 

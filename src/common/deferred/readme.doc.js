@@ -79,7 +79,7 @@ export default (pkg, meta, types) => ({
           script: {
             type: types.SCRIPT_JSON,
             content: `
-              "Some value'
+              "Some value"
             `,
           },
         },

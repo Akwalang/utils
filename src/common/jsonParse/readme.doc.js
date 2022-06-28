@@ -134,7 +134,7 @@ export default (pkg, meta, types) => ({
         {
           type: types.CONTENT_SCRIPT,
           script: {
-            type: types.SCRIPT_JSON,
+            type: types.SCRIPT_JS,
             content: `
               undefined
             `,

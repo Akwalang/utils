@@ -101,8 +101,8 @@ export default (pkg, meta, types) => ({
             type: types.SCRIPT_JSON,
             content: `
               [
-                { time: 463, stack: [[1], [2]] },
-                { time: 1055, stack: [[3], [4], [5]] }
+                { "time": 463, "stack": [[1], [2]] },
+                { "time": 1055, "stack": [[3], [4], [5]] }
               ]
             `,
           },
@@ -114,7 +114,7 @@ export default (pkg, meta, types) => ({
     },
     {
       type: types.SECTION_DESCRIPTION,
-      title: 'throttle(callback, delay, minDelay, maxDelay)',
+      title: 'throttle(callback, delay, delayMin, delayMax)',
       content: [
         {
           type: types.CONTENT_PARAMS,
@@ -130,12 +130,12 @@ export default (pkg, meta, types) => ({
               description: 'time in ms',
             },
             {
-              name: 'minDelay',
+              name: 'delayMin',
               type: 'number',
               description: 'min delay in ms',
             },
             {
-              name: 'maxDelay',
+              name: 'delayMax',
               type: 'number',
               description: 'max delay in ms',
             },

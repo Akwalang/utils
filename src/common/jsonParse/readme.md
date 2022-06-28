@@ -55,6 +55,6 @@ jsonParse('{INCORRECT JSON VALUE]', undefined);
 
 #### Result
 
-```json
+```javascript
 undefined
 ```
