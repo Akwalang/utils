@@ -3,5 +3,9 @@ export default function tplParagraph(content) {
 
   md += content.items.map(item => item.text).join('\n\n');
 
+  if (content.items.length > 1) {
+    md += '\n';
+  }
+
   return md;
 };
