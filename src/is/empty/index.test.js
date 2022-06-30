@@ -16,4 +16,6 @@ test('Is.empty', () => {
 
   expect(isEmpty([null, undefined], false)).toBe(true);
   expect(isEmpty({ a: null, b: undefined }, false)).toBe(true);
+
+  expect(isEmpty({ a: null, b: [[], [], [null, undefined]] }, false)).toBe(true);
 });

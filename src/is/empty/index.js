@@ -8,7 +8,7 @@ export default function empty(value, strait = true) {
   value = isObject(value) ? Object.values(value) : value;
 
   if (isArray(value)) {
-    return strait ? !value.length : value.every(isNil);
+    return strait ? !value.length : value.every(item => empty(item, false));
   }
 
   return false;
