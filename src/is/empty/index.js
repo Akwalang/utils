@@ -3,7 +3,7 @@ import isArray from '../array/index.js';
 import isNil from '../nil/index.js';
 
 export default function empty(value, strait = true) {
-  if (isNil(value)) return true;
+  if (isNil(value) || value === '') return true;
 
   value = isObject(value) ? Object.values(value) : value;
 
