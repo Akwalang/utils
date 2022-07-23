@@ -5,7 +5,7 @@ type Options = {
 
 declare function read(
   path: string | string[],
-  options: Options
+  options?: Options
 ): Promise<string>;
 
 export default read;

@@ -9,7 +9,7 @@ type Options = {
 declare function write(
   dest: string | string[],
   data: Data,
-  options: Options
+  options?: Options
 ): Promise<undefined>;
 
 export default write;
