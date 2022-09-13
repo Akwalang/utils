@@ -1,4 +1,4 @@
-export default (pkg, meta, types) => ({
+module.exports = (pkg, meta, types) => ({
   title: 'debug.write',
   sections: [
     {

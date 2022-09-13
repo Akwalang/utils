@@ -2,5 +2,7 @@ node_modules
 
 .idea
 
+dist
+
 *.dev.js
 *.__debug__.json

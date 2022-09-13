@@ -1,10 +1,10 @@
-import readFile from '../../src/file/read/index.js';
-import writeFile from '../../src/file/write/index.js';
+const readFile = require('../../dist/file/read/index.js');
+const writeFile = require('../../dist/file/write/index.js');
 
-import readDeepDir from '../../src/directory/readDeep/index.js';
-import createSorter from '../../src/array/createSorter/index.js';
+const readDeepDir = require('../../dist/directory/readDeep/index.js');
+const createSorter = require('../../dist/array/createSorter/index.js');
 
-export default async function updatePackageExports(root, src) {
+module.exports = async function updatePackageExports(root, src) {
   const list = await readDeepDir(src);
 
   let content = await readFile(root, 'package.json');
@@ -15,13 +15,13 @@ export default async function updatePackageExports(root, src) {
     .sort(createSorter((item) => item.replace('/index.js', '')));
 
   const mains = [
-    './src/client.js',
-    './src/server.js',
+    './dist/client.js',
+    './dist/server.js',
   ];
 
   const exports = [...mains, ...files].map((file) => {
     const name = file
-      .replace('/src', '')
+      .replace('/dist', '')
       .replace('.js', '')
       .replace('/index', '');
 

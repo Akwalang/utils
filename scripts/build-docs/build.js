@@ -1,11 +1,8 @@
-import resolve from '../../src/path/resolve/index.js';
-import dirname from '../../src/path/dirname/index.js';
+const main = require('./templates/main.tpl.js');
 
-import main from './templates/main.tpl.js';
-
-import pkg from '../package.js';
-import meta from '../meta.js';
-import types from './types.js';
+const pkg = require('../package.js');
+const meta = require('../meta.js');
+const types = require('./types.js');
 
 const build = async (provider) => {
   const data = provider(pkg, meta, types);
@@ -13,4 +10,4 @@ const build = async (provider) => {
   return main(data);
 };
 
-export default build;
+module.exports = build;

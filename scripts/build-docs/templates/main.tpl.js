@@ -1,6 +1,6 @@
-import tplSection from './sections/index.js';
+const tplSection = require('./sections/index.js');
 
-export default function main(data) {
+module.exports = function main(data) {
   let md = `## ${data.title}\n\n`;
 
   md += data.sections.map(section => tplSection(section, data.sections)).join('\n\n');

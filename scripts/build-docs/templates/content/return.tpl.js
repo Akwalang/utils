@@ -1,4 +1,4 @@
-export default function tplReturn(content) {
+module.exports = function tplReturn(content) {
   let md = `**Return:**`
 
   md += '\n\n';

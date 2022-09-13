@@ -1,24 +1,24 @@
-import resolve from '../../src/path/resolve/index.js';
-import dirname from '../../src/path/dirname/index.js';
-import readFile from '../../src/file/read/index.js';
-import readDeepDir from '../../src/directory/readDeep/index.js';
-
-const __dirname = dirname(import.meta);
+const resolve = require('../../dist/path/resolve/index.js');
+const dirname = require('../../dist/path/dirname/index.js');
+const readFile = require('../../dist/file/read/index.js');
+const readDeepDir = require('../../dist/directory/readDeep/index.js');
 
 const root = resolve(__dirname, '../../src');
 
-const list = (await readDeepDir(root)).filter(item => item.endsWith('.doc.js'));
+module.exports = async function getDocFiles() {
+  const list = (await readDeepDir(root)).filter(item => item.endsWith('.doc.js'));
 
-const docs = [];
+  const docs = [];
 
-for (let i = 0, len = list.length; i < len; i++) {
-  const file = list[i];
-  const target = list[i].replace('.doc.js', '.md');
-  const content = await readFile(file);
+  for (let i = 0, len = list.length; i < len; i++) {
+    const file = list[i];
+    const target = list[i].replace('.doc.js', '.md');
+    const content = await readFile(file);
 
-  const provider = eval(content.replace('export default', ''));
+    const provider = eval(content.replace('export default', ''));
 
-  docs.push({ file, target, provider });
-}
+    docs.push({ file, target, provider });
+  }
 
-export default docs;
+  return docs;
+};

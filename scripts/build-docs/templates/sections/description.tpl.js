@@ -1,6 +1,6 @@
-import tplContent from '../content/index.js';
+const tplContent = require('../content/index.js');
 
-export default function tplDescription(section) {
+module.exports = function tplDescription(section) {
   let md = '```javascript\n' + section.title + '\n```\n\n';
 
   md += section.content.map(tplContent).join('\n');

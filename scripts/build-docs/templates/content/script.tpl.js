@@ -1,6 +1,6 @@
-import types from '../../types.js';
+const types = require('../../types.js');
 
-export default function tplScript(content) {
+module.exports = function tplScript(content) {
   const type = {
     [types.SCRIPT_JS]: 'javascript',
     [types.SCRIPT_JSON]: 'json',

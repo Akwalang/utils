@@ -1,11 +1,11 @@
-import tplParam from '../content/param.tpl.js';
-import tplReturn from '../content/return.tpl.js';
-import tplScript from '../content/script.tpl.js';
-import tplParagraph from '../content/paragraph.tpl.js';
+const tplParam = require('../content/param.tpl.js');
+const tplReturn = require('../content/return.tpl.js');
+const tplScript = require('../content/script.tpl.js');
+const tplParagraph = require('../content/paragraph.tpl.js');
 
-import types from '../../types.js';
+const types = require('../../types.js');
 
-export default function content(item) {
+module.exports = function content(item) {
   switch (item.type) {
     case types.CONTENT_PARAMS: return tplParam(item);
     case types.CONTENT_RETURN: return tplReturn(item);

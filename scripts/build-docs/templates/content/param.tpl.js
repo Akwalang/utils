@@ -1,4 +1,4 @@
-export default function tplParam(content) {
+module.exports = function tplParam(content) {
   let md = `**Params:**\n\n`;
 
   md += content.items.map(item => {
