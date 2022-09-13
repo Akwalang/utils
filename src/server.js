@@ -1,9 +1,0 @@
-export * as array from './array/index.js';
-export * as common from './common/index.js';
-export * as directory from './directory/index.js';
-export * as file from './file/index.js';
-export * as object from './object/index.js';
-export * as path from './path/index.js';
-export * as process from './process/index.js';
-export * as string from './string/index.js';
-export * as types from './types/index.js';
