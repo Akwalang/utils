@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-
 import isDate from '../../is/date';
 import isArray from '../../is/array';
 import isPlainObject from '../../is/plainObject';
