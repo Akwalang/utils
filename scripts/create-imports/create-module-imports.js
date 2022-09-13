@@ -6,7 +6,7 @@ module.exports = async function createModuleImports(root, src) {
 
   const files = list
     .map(item => item.replace(root, ''))
-    .filter(item => item.endsWith('index.js'))
+    .filter(item => item.endsWith('index.ts'))
     .filter(item => item.split(/\\|\//).length === 4);
 
   const modules = files.reduce((result, file) => {
@@ -20,11 +20,11 @@ module.exports = async function createModuleImports(root, src) {
   }, {});
 
   const stack = Object.keys(modules).map(name => {
-    const line = (method) => `export { default as ${method} } from './${method}/index.js';\n`;
+    const line = (method) => `export { default as ${method} } from './${method}';\n`;
 
     const content = modules[name].map(line).join('');
 
-    return writeFile([root, name, 'index.js'], content);
+    return writeFile([root, name, 'index.ts'], content);
   });
 
   return Promise.all(stack);

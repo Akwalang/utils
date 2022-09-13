@@ -4,22 +4,19 @@ const writeFile = require('../../dist/file/write/index.js');
 const readDeepDir = require('../../dist/directory/readDeep/index.js');
 const createSorter = require('../../dist/array/createSorter/index.js');
 
-module.exports = async function updatePackageExports(root, src) {
-  const list = await readDeepDir(src);
+module.exports = async function updatePackageExports(root, dist) {
+  const list = await readDeepDir(dist);
 
-  let content = await readFile(root, 'package.json');
+  let content = await readFile([root, 'package.json']);
+
+  const sorter = createSorter((item) => item.replace('/index.js', ''));
 
   const files = list
     .map(item => item.replace(root, '.').replace(/\\|\//g, '/'))
     .filter(item => item.endsWith('index.js'))
-    .sort(createSorter((item) => item.replace('/index.js', '')));
+    .sort(sorter);
 
-  const mains = [
-    './dist/client.js',
-    './dist/server.js',
-  ];
-
-  const exports = [...mains, ...files].map((file) => {
+  const exports = [...files].map((file) => {
     const name = file
       .replace('/dist', '')
       .replace('.js', '')

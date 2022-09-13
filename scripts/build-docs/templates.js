@@ -2,7 +2,6 @@ const Hbs = require('handlebars');
 
 const setter = require('../../dist/object/setter/index.js');
 const resolve = require('../../dist/path/resolve/index.js');
-const dirname = require('../../dist/path/dirname/index.js');
 const readFile = require('../../dist/file/read/index.js');
 const readDeepDir = require('../../dist/directory/readDeep/index.js');
 
