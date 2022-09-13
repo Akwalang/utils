@@ -1,12 +1,10 @@
-import Hbs from 'handlebars';
+const Hbs = require('handlebars');
 
-import setter from '../../src/object/setter/index.js';
-import resolve from '../../src/path/resolve/index.js';
-import dirname from '../../src/path/dirname/index.js';
-import readFile from '../../src/file/read/index.js';
-import readDeepDir from '../../src/directory/readDeep/index.js';
-
-const __dirname = dirname(import.meta);
+const setter = require('../../dist/object/setter/index.js');
+const resolve = require('../../dist/path/resolve/index.js');
+const dirname = require('../../dist/path/dirname/index.js');
+const readFile = require('../../dist/file/read/index.js');
+const readDeepDir = require('../../dist/directory/readDeep/index.js');
 
 const getTemplates = async () => {
   const root = resolve(__dirname, './templates');
@@ -33,4 +31,4 @@ const getTemplates = async () => {
   return templates;
 };
 
-export default getTemplates;
+module.exports = getTemplates;

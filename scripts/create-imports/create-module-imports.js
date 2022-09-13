@@ -1,7 +1,7 @@
-import writeFile from '../../src/file/write/index.js';
-import readDeepDir from '../../src/directory/readDeep/index.js';
+const writeFile = require('../../dist/file/write/index.js');
+const readDeepDir = require('../../dist/directory/readDeep/index.js');
 
-export default async function createModuleImports(root, src) {
+module.exports = async function createModuleImports(root, src) {
   const list = await readDeepDir(src);
 
   const files = list

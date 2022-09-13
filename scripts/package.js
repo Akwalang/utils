@@ -1,8 +1,6 @@
-import dirname from '../src/path/dirname/index.js';
-import readFile from '../src/file/read/index.js';
+const fs = require('fs');
+const path = require('path');
 
-const __dirname = dirname(import.meta);
+const content = fs.readFileSync(path.resolve(__dirname, '../package.json'));
 
-const content = await readFile(__dirname, '../package.json');
-
-export default JSON.parse(content);
+module.exports = JSON.parse(content);

@@ -1,18 +1,14 @@
-import chalk from 'chalk';
+const chalk = require('chalk');
 
-import resolve from '../../src/path/resolve/index.js';
-import dirname from '../../src/path/dirname/index.js';
+const resolve = require('../../dist/path/resolve/index.js');
 
-import isFileExists from '../../src/file/isExists/index.js';
-
-import readFile from '../../src/file/read/index.js';
-import writeFile from '../../src/file/write/index.js';
-
-const __dirname = dirname(import.meta);
+const isFileExists = require('../../dist/file/isExists/index.js');
+const readFile = require('../../dist/file/read/index.js');
+const writeFile = require('../../dist/file/write/index.js');
 
 const root = resolve(__dirname, '../..');
 
-export default async function write(target, content) {
+module.exports = async function write(target, content) {
   const relative = target.replace(root, '').split('\\').join('/');
   const exists = await isFileExists(target);
 

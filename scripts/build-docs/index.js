@@ -1,8 +1,8 @@
-import chalk from 'chalk';
+const chalk = require('chalk');
 
-import docs from './get-doc-files.js';
-import build from './build.js';
-import write from './write.js';
+const getDocs = require('./get-doc-files.js');
+const build = require('./build.js');
+const write = require('./write.js');
 
 const stats = {
   created: 0,
@@ -10,20 +10,24 @@ const stats = {
   skipped: 0,
 };
 
-console.log(' ');
+(async () => {
+  console.log(' ');
 
-for (let i = 0, len = docs.length; i < len; i++) {
-  const { target, provider } = docs[i];
+  const docs = await getDocs();
 
-  const content = await build(provider);
+  for (let i = 0, len = docs.length; i < len; i++) {
+    const { target, provider } = docs[i];
 
-  const type = await write(target, content);
+    const content = await build(provider);
 
-  stats[type] += 1;
-}
+    const type = await write(target, content);
 
-console.log('\nDone!\n');
+    stats[type] += 1;
+  }
 
-console.log(`Files created: ${chalk.green(stats.created)}`);
-console.log(`Files updated: ${chalk.cyan(stats.updated)}`);
-console.log(`Files skipped: ${chalk.yellow(stats.skipped)}`);
+  console.log('\nDone!\n');
+
+  console.log(`Files created: ${chalk.green(stats.created)}`);
+  console.log(`Files updated: ${chalk.cyan(stats.updated)}`);
+  console.log(`Files skipped: ${chalk.yellow(stats.skipped)}`);
+})();

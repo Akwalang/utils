@@ -1,6 +1,6 @@
-import types from '../../types.js';
+const types = require('../../types.js');
 
-export default function tplUsage(section, sections) {
+module.exports = function tplUsage(section, sections) {
   const usages = sections.filter(item => item.type === types.SECTION_USAGE);
 
   let md = ``;

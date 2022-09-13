@@ -1,13 +1,13 @@
-import tplDescription from './description.tpl.js';
-import tplParagraph from './paragraph.tpl.js';
-import tplExample from './example.tpl.js';
-import tplImport from './import.tpl.js';
-import tplResult from './result.tpl.js';
-import tplUsage from './usage.tpl.js';
+const tplDescription = require('./description.tpl.js');
+const tplParagraph = require('./paragraph.tpl.js');
+const tplExample = require('./example.tpl.js');
+const tplImport = require('./import.tpl.js');
+const tplResult = require('./result.tpl.js');
+const tplUsage = require('./usage.tpl.js');
 
-import types from '../../types.js';
+const types = require('../../types.js');
 
-export default function content(item, sections) {
+module.exports = function content(item, sections) {
   switch (item.type) {
     case types.SECTION_DESCRIPTION: return tplDescription(item, sections);
     case types.SECTION_PARAGRAPH: return tplParagraph(item, sections);
