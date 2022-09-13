@@ -15,4 +15,4 @@ function intersection<T>(comparator: Comparator<T> | T[], ...arrays: T[][]) {
   });
 }
 
-export default intersection;
+export = intersection;

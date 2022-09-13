@@ -5,7 +5,7 @@ const { hasOwnProperty } = Object.prototype;
 
 type RecordAny = Record<any, any>;
 
-export default function merge<A extends RecordAny, B extends RecordAny>(dest: A, src: B): A & B {
+export = function merge<A extends RecordAny, B extends RecordAny>(dest: A, src: B): A & B {
   for (const name in src) {
     if (!hasOwnProperty.call(src, name)) continue;
 

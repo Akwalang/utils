@@ -1,4 +1,4 @@
-export default function chunk<T>(array: T[], size: number): T[][] {
+export = function chunk<T>(array: T[], size: number): T[][] {
   size = Math.max(size, 1);
 
   const result = [];

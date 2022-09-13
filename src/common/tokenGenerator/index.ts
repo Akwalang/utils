@@ -1,6 +1,6 @@
 const LETTERS = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-export default function tokenGenerator(length: number, letters: string = LETTERS): string {
+export = function tokenGenerator(length: number, letters: string = LETTERS): string {
   let result = '';
 
   while (length--) {

@@ -1,4 +1,4 @@
-export type NextId<T> = {
+type NextId<T> = {
   (): T;
   setMax(top: number): NextId<T>;
 };
@@ -26,4 +26,4 @@ function idGenerator(prefix?: null | string, postfix?: string) {
   return next;
 }
 
-export default idGenerator;
+export = idGenerator;

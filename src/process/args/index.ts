@@ -4,7 +4,7 @@ const reg = /-{0,2}([^=\s]+)=?\s*(.*)/;
 
 // process.argv
 
-export default function args(args: string[]): Record<any, any> {
+export = function args(args: string[]): Record<any, any> {
   const result: Record<any, any> = {};
 
   for (let i = 2, len = args.length; i < len; i++) {

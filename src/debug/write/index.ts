@@ -7,7 +7,7 @@ import writeFile from '../../file/write';
 
 import isString from '../../is/string';
 
-export default function write(data: any, name?: string): Promise<void> {
+export = function write(data: any, name?: string): Promise<void> {
   const url = getStack(1, 2)[0].file;
 
   const dir = dirname({ url });

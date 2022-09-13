@@ -1,6 +1,6 @@
 const DEFAULT_GETTER = (v: any): number => v;
 
-export default function matchRange<T, F = undefined>(
+export = function matchRange<T, F = undefined>(
   array: T[],
   fallback?: F,
   getValue: typeof DEFAULT_GETTER = DEFAULT_GETTER,

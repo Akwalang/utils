@@ -9,7 +9,7 @@ const DEFAULTS: Options = {
   encoding: 'utf8',
 };
 
-export default function read(path: string | string[], options?: Options): Promise<string | Buffer> {
+export = function read(path: string | string[], options?: Options): Promise<string | Buffer> {
   path = resolve(path);
   options = Object.assign({}, DEFAULTS, isString(options) ? { encoding: options } : options);
 

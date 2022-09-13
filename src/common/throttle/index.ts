@@ -1,14 +1,14 @@
 type Timeout = ReturnType<typeof setTimeout>;
 
-export type ThrottleCallback<T> = (stack: T[]) => void;
+type ThrottleCallback<T> = (stack: T[]) => void;
 
-export type Throttler<T extends Array<any>> = {
+type Throttler<T extends Array<any>> = {
   (...args: T): void;
   flush: () => void;
   destroy: () => void;
 };
 
-export default function throttle<T extends Array<any>>(
+export = function throttle<T extends Array<any>>(
   callback: ThrottleCallback<T>,
   delay: number,
   delayMin?: number,

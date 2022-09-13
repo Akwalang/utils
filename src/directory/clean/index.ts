@@ -6,7 +6,7 @@ import removeFile from '../../file/remove';
 
 import read from '../read';
 
-export default async function clean(...path: (string | string[])[]): Promise<void> {
+export = async function clean(...path: (string | string[])[]): Promise<void> {
   const target = resolve(...path);
 
   const children = await read(target);

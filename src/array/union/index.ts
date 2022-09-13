@@ -11,4 +11,4 @@ function union<T>(comparator: Comparator<T> | T[], ...arrays: T[][]): T[] {
   return deduplicate(items.flat(), compare);
 }
 
-export default union;
+export = union;

@@ -5,7 +5,7 @@ import isObject from '../object';
 
 const _hasOwnProperty = Object.prototype.hasOwnProperty;
 
-export default function isEqual(a: any, b: any): boolean {
+export = function isEqual(a: any, b: any): boolean {
   if (isNaN(a) && isNaN(b)) return true;
   if (isDate(a) && isDate(b)) return +a === +b;
 

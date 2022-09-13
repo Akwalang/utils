@@ -1,4 +1,4 @@
-export default function getter<T = any>(data: object, path: string): T | undefined {
+export = function getter<T = any>(data: object, path: string): T | undefined {
   let name, context: any = data;
 
   const paths = path.split(/]\[|]\.|\.|]|\[/).filter(v => v);

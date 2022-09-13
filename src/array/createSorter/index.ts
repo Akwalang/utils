@@ -88,4 +88,4 @@ function createSorter<T extends AnyRecord>(keys: null | KeysList<T> = null, dirs
   };
 }
 
-export default createSorter;
+export = createSorter;

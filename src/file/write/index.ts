@@ -7,7 +7,7 @@ import resolve from '../../path/resolve';
 type Data = Parameters<typeof fs.writeFile>[1];
 type Options = Parameters<typeof fs.writeFile>[2];
 
-export default async function write(
+export = async function write(
   dest: string | string[],
   data: Data,
   options?: Options

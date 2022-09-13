@@ -2,7 +2,7 @@ import resolve from '../../path/resolve';
 
 import read from '../read';
 
-export default async function readDeep(path: string | string[]): Promise<string[]> {
+export = async function readDeep(path: string | string[]): Promise<string[]> {
   let items = await read(path);
 
   items = items.map(item => resolve(path, item));

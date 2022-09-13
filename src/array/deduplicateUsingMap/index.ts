@@ -1,6 +1,6 @@
 type GetId<T> = (value: T) => string | number | T;
 
-export default function deduplicateUsingMap<T>(
+export = function deduplicateUsingMap<T>(
   target: T[],
   getId: GetId<T> = value => value,
 ): T[] {

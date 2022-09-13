@@ -59,4 +59,4 @@ function create<T>(from: number, to?: number | SyncTransform<T> | AsyncTransform
   throw new Error('array.create received wrong arguments: ' + [...arguments]);
 }
 
-export default create;
+export = create;

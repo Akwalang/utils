@@ -1,4 +1,4 @@
-export default function iterator(reg: RegExp, str: string): Generator<RegExpExecArray, void, unknown> {
+export = function iterator(reg: RegExp, str: string): Generator<RegExpExecArray, void, unknown> {
   if (!reg.global) throw new Error('RegExp must have the global modifier');
 
   const generator = function* regexpIterator() {

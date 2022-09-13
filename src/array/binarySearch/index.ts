@@ -13,7 +13,7 @@ const createComparator= <T>(value: T) => (item: T): number => {
 
 const middle = (from: number, to: number) => Math.floor((from + to) / 2);
 
-export default function binarySearch<T>(array: T[], value: T | Comparator<T>, side: Side = 0) {
+export = function binarySearch<T>(array: T[], value: T | Comparator<T>, side: Side = 0) {
   let from = 0;
   let to = array.length - 1;
 

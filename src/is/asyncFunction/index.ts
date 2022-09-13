@@ -5,6 +5,6 @@ const Constructor = (async () => {}).constructor;
 
 type AsyncFunction = typeof Constructor;
 
-export default function isAsyncFunction(value: unknown): value is AsyncFunction {
+export = function isAsyncFunction(value: unknown): value is AsyncFunction {
   return getType(value) === 'AsyncFunction';
 }

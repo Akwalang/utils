@@ -1,6 +1,6 @@
 import { type Comparator, DEFAULT_COMPARATOR } from '../utils';
 
-export default function deduplicate<T>(target: T[], comparator?: Comparator<T>): T[] {
+export = function deduplicate<T>(target: T[], comparator?: Comparator<T>): T[] {
   comparator = comparator || DEFAULT_COMPARATOR;
 
   for (let i = 0; i < target.length - 1; i++) {

@@ -18,7 +18,7 @@ function callsites(): { getFileName: () => string }[] {
   return stack;
 }
 
-export default function getStack(from?: number, to?: number): { file: string }[] {
+export = function getStack(from?: number, to?: number): { file: string }[] {
 let [, ...stack] = callsites();
 
 stack = stack.slice(from, to);

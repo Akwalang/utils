@@ -41,7 +41,7 @@ const createNode = (type: Types): Array<any> | Record<any, any> => ({
   [Types.TYPE_ARRAY]: [],
 }[type]);
 
-export default function setter(target: Record<any, any> | Array<any> & Record<any, any>, path: string, value: any): void {
+export = function setter(target: Record<any, any> | Array<any> & Record<any, any>, path: string, value: any): void {
   let part: PathItem | undefined, context = target;
 
   const parts = parse(path);

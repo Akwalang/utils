@@ -1,6 +1,4 @@
 export { default as deferred } from './deferred';
-export { type Deferred as Deferred } from './deferred';
-
 export { default as idGenerator } from './idGenerator';
 export { default as jsonParse } from './jsonParse';
 export { default as random } from './random';

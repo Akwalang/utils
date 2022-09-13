@@ -8,7 +8,7 @@ const hop = Object.prototype.hasOwnProperty;
 
 const TYPES = [Number, String, Boolean];
 
-export default function clone<T>(entity: T): T {
+export = function clone<T>(entity: T): T {
   // null, undefined, NaN values check
   if (!entity) return entity;
 
