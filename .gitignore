@@ -1,9 +1,0 @@
-node_modules
-
-.idea
-
-# Add dist in registry because package isn't published in
-# dist
-
-*.dev.js
-*.__debug__.json
