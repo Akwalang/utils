@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import isArray from '${meta.npm.name}/is/array';`,
+            content: `import { isArray } from '${meta.npm.name}/is/array';`,
           },
         },
       ],

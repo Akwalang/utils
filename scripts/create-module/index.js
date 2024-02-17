@@ -1,16 +1,16 @@
 const chalk = require('chalk');
 const prompt = require('prompt');
 
-const readDir = require('../../dist/directory/read/index.js');
-const isExistsDir = require('../../dist/directory/isExists/index.js');
+const readDir = require('../../dist/directory/read/index.js').read;
+const isExistsDir = require('../../dist/directory/isExists/index.js').isExists;
 
-const readFile = require('../../dist/file/read/index.js');
-const writeFile = require('../../dist/file/write/index.js');
+const readFile = require('../../dist/file/read/index.js').read;
+const writeFile = require('../../dist/file/write/index.js').write;
 
-const args = require('../../dist/process/args/index.js');
-const resolve = require('../../dist/path/resolve/index.js');
-const template = require('../../dist/string/template/index.js');
-const capitalize = require('../../dist/string/capitalize/index.js');
+const args = require('../../dist/process/args/index.js').args;
+const resolve = require('../../dist/path/resolve/index.js').resolve;
+const template = require('../../dist/string/template/index.js').template;
+const capitalize = require('../../dist/string/capitalize/index.js').capitalize;
 
 (async () => {
   const files = await readDir(__dirname, 'templates');

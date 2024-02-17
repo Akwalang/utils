@@ -1,4 +1,4 @@
-export { default as dirname } from './dirname';
-export { default as filename } from './filename';
-export { default as resolve } from './resolve';
-export { default as stat } from './stat';
+export * from './dirname';
+export * from './filename';
+export * from './resolve';
+export * from './stat';

@@ -3,7 +3,7 @@
 Return content of file
 
 ```javascript
-import write from '@utils/file/write';
+import { write } from '@utils/file/write';
 ```
 
 ### Usage

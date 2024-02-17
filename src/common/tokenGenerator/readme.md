@@ -3,7 +3,7 @@
 Generate string with required length and random chars
 
 ```javascript
-import tokenGenerator from '@utils/common/tokenGenerator';
+import { tokenGenerator } from '@utils/common/tokenGenerator';
 ```
 
 ### Usage

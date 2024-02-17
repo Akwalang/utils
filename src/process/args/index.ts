@@ -1,10 +1,10 @@
-import jsonParse from '../../common/jsonParse';
+import { jsonParse } from '../../common/jsonParse';
 
 const reg = /-{0,2}([^=\s]+)=?\s*(.*)/;
 
 // process.argv
 
-export = function args(args: string[]): Record<any, any> {
+export const args = function args(args: string[]): Record<any, any> {
   const result: Record<any, any> = {};
 
   for (let i = 2, len = args.length; i < len; i++) {
@@ -14,4 +14,4 @@ export = function args(args: string[]): Record<any, any> {
   }
 
   return result;
-}
+};

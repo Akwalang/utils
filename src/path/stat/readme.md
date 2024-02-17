@@ -3,7 +3,7 @@
 Return deep copy of provided value
 
 ```javascript
-import stat from '@utils/path/stat';
+import { stat } from '@utils/path/stat';
 ```
 
 ### Usage

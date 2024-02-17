@@ -1,4 +1,4 @@
-import dirname from '.';
+import { dirname } from '.';
 
 test('Path.dirname', () => {
   const file = 'file:///' + __filename.split('\\').join('/');

@@ -1,6 +1,6 @@
-import readDeep from '.';
+import { readDeep } from '.';
 
-import resolve from '../../path/resolve';
+import { resolve } from '../../path/resolve';
 
 test('Directory.readDeep', async () => {
   const files = await readDeep(__dirname);
@@ -11,5 +11,6 @@ test('Directory.readDeep', async () => {
     resolve(__dirname, 'mock/deep_file.txt'),
     resolve(__dirname, 'mock'),
     resolve(__dirname, 'readme.doc.js'),
+    resolve(__dirname, 'readme.md'),
   ]);
 });

@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import clone from '${meta.npm.name}/object/clone';`,
+            content: `import { clone } from '${meta.npm.name}/object/clone';`,
           },
         },
       ],

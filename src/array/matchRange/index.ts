@@ -1,6 +1,6 @@
 const DEFAULT_GETTER = (v: any): number => v;
 
-export = function matchRange<T, F = undefined>(
+export const matchRange = function matchRange<T, F = undefined>(
   array: T[],
   fallback?: F,
   getValue: typeof DEFAULT_GETTER = DEFAULT_GETTER,
@@ -15,4 +15,4 @@ export = function matchRange<T, F = undefined>(
 
     return [min, max];
   }, [Infinity, -Infinity]);
-}
+};

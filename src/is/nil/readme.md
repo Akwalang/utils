@@ -3,7 +3,7 @@
 Checks if value is null or undefined
 
 ```javascript
-import isNil from '@utils/is/nil';
+import { isNil } from '@utils/is/nil';
 ```
 
 ### Usage

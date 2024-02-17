@@ -8,7 +8,7 @@ And will return true in not strait mode event if passed: an array or object with
 
 
 ```javascript
-import isEmpty from '@utils/is/empty';
+import { isEmpty } from '@utils/is/empty';
 ```
 
 ### Usage

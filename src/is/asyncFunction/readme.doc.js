@@ -21,7 +21,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import isAsyncFunction from '${meta.npm.name}/is/array';`,
+            content: `import { isAsyncFunction } from '${meta.npm.name}/is/array';`,
           },
         },
       ],

@@ -1,6 +1,6 @@
-export { default as clean } from './clean';
-export { default as create } from './create';
-export { default as isExists } from './isExists';
-export { default as read } from './read';
-export { default as readDeep } from './readDeep';
-export { default as remove } from './remove';
+export * from './clean';
+export * from './create';
+export * from './isExists';
+export * from './read';
+export * from './readDeep';
+export * from './remove';

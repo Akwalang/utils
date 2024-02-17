@@ -1,10 +1,10 @@
 const chalk = require('chalk');
 
-const resolve = require('../../dist/path/resolve/index.js');
+const resolve = require('../../dist/path/resolve/index.js').resolve;
 
-const isFileExists = require('../../dist/file/isExists/index.js');
-const readFile = require('../../dist/file/read/index.js');
-const writeFile = require('../../dist/file/write/index.js');
+const isFileExists = require('../../dist/file/isExists/index.js').isExists;
+const readFile = require('../../dist/file/read/index.js').read;
+const writeFile = require('../../dist/file/write/index.js').write;
 
 const root = resolve(__dirname, '../..');
 

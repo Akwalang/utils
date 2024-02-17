@@ -1,4 +1,4 @@
-import replaceAll from '.';
+import { replaceAll } from '.';
 
 test('String.replaceAll', () => {
   const result = replaceAll('1 test 2 test 3 test', 'test', 'replacer');

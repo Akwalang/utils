@@ -1,4 +1,4 @@
-import matchRange from '.';
+import { matchRange } from '.';
 
 test('Array.matchRange: default', () => {
   const range = matchRange([7, 16, 3, 86, 9, 65, 43]);

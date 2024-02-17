@@ -1,11 +1,11 @@
-import clone from '../clone';
-import isPlainObject from '../../is/plainObject';
+import { clone } from '../clone';
+import { isPlainObject } from '../../is/plainObject';
 
 const { hasOwnProperty } = Object.prototype;
 
 type RecordAny = Record<any, any>;
 
-export = function merge<A extends RecordAny, B extends RecordAny>(dest: A, src: B): A & B {
+export const merge = function merge<A extends RecordAny, B extends RecordAny>(dest: A, src: B): A & B {
   for (const name in src) {
     if (!hasOwnProperty.call(src, name)) continue;
 
@@ -20,4 +20,4 @@ export = function merge<A extends RecordAny, B extends RecordAny>(dest: A, src: 
   }
 
   return dest;
-}
+};

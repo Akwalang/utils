@@ -1,6 +1,6 @@
-import stat from '../../path/stat';
+import { stat } from '../../path/stat';
 
-export = async function isExists(...target: (string | string[])[]): Promise<boolean> {
+export const isExists = async function isExists(...target: (string | string[])[]): Promise<boolean> {
   try {
     const stt = await stat(...target);
 
@@ -8,4 +8,4 @@ export = async function isExists(...target: (string | string[])[]): Promise<bool
   } catch (e) {
     return false;
   }
-}
+};

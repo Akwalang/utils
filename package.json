@@ -10,8 +10,8 @@
     "./array/combine": "./dist/array/combine/index.js",
     "./array/create": "./dist/array/create/index.js",
     "./array/createSorter": "./dist/array/createSorter/index.js",
+    "./array/cyclicDeduplicate": "./dist/array/cyclicDeduplicate/index.js",
     "./array/deduplicate": "./dist/array/deduplicate/index.js",
-    "./array/deduplicateUsingMap": "./dist/array/deduplicateUsingMap/index.js",
     "./array/difference": "./dist/array/difference/index.js",
     "./array/intersection": "./dist/array/intersection/index.js",
     "./array/matchRange": "./dist/array/matchRange/index.js",
@@ -67,20 +67,18 @@
     "./process": "./dist/process/index.js",
     "./process/args": "./dist/process/args/index.js",
     "./process/getStack": "./dist/process/getStack/index.js",
-    "./regexp": "./dist/regexp/index.js",
-    "./regexp/iterator": "./dist/regexp/iterator/index.js",
-    "./regexp/matchAll": "./dist/regexp/matchAll/index.js",
     "./string": "./dist/string/index.js",
     "./string/capitalize": "./dist/string/capitalize/index.js",
     "./string/capitalizeAll": "./dist/string/capitalizeAll/index.js",
     "./string/replaceAll": "./dist/string/replaceAll/index.js",
     "./string/template": "./dist/string/template/index.js",
     "./types": "./dist/types/index.js",
-    "./types/get": "./dist/types/get/index.js"
+    "./types/getType": "./dist/types/getType/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "npm run create-imports && npm run compile && npm run build-docs",
     "build-docs": "node ./scripts/build-docs/index.js",
+    "compile": "tsc",
     "create-imports": "node ./scripts/create-imports/index.js",
     "create-module": "node ./scripts/create-module/index.js",
     "test": "jest ./src"

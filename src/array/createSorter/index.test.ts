@@ -1,4 +1,4 @@
-import createSorter from '.';
+import { createSorter } from '.';
 
 test('Array.sorter: default options', () => {
   const list = [6, 2, 4, 8, 1, 5, 7, 3];

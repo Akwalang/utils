@@ -1,13 +1,13 @@
-import getStack from '../../process/getStack';
+import { getStack } from '../../process/getStack';
 
-import dirname from '../../path/dirname';
-import filename from '../../path/filename';
+import { dirname } from '../../path/dirname';
+import { filename } from '../../path/filename';
 
-import writeFile from '../../file/write';
+import { write as writeFile } from '../../file/write';
 
-import isString from '../../is/string';
+import { isString } from '../../is/string';
 
-export = function write(data: any, name?: string): Promise<void> {
+export const write = function write(data: any, name?: string): Promise<void> {
   const url = getStack(1, 2)[0].file;
 
   const dir = dirname({ url });
@@ -19,4 +19,4 @@ export = function write(data: any, name?: string): Promise<void> {
   const string = isString(data) ? data : JSON.stringify(data, null, '  ');
 
   return writeFile([dir, target], string);
-}
+};

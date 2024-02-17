@@ -1,4 +1,4 @@
-import isArray from '.';
+import { isArray } from '.';
 
 test('Is.array', () => {
   expect(isArray([])).toBe(true);

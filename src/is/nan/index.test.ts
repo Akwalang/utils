@@ -1,4 +1,4 @@
-import isNaN from '.';
+import { isNaN } from '.';
 
 test('Is.isNaN', () => {
   expect(isNaN(NaN)).toBe(true);

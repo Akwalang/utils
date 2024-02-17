@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import merge from '${meta.npm.name}/object/merge';`,
+            content: `import { merge } from '${meta.npm.name}/object/merge';`,
           },
         },
       ],

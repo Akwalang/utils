@@ -1,9 +1,9 @@
 import fs from 'fs/promises';
 
-import resolve from '../../path/resolve';
-import stat from '../../path/stat';
+import { resolve } from '../../path/resolve';
+import { stat } from '../../path/stat';
 
-export = async function remove(path: string | string[]): Promise<void> {
+export const remove = async function remove(path: string | string[]): Promise<void> {
   const target = resolve(path);
 
   const stt = await stat(target);
@@ -11,4 +11,4 @@ export = async function remove(path: string | string[]): Promise<void> {
   if (!stt || !stt.isDirectory()) return;
 
   return fs.rm(target, { recursive: true });
-}
+};

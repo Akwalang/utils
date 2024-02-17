@@ -3,7 +3,7 @@
 Checks if value is classified as an instance of Array
 
 ```javascript
-import isArray from '@utils/is/array';
+import { isArray } from '@utils/is/array';
 ```
 
 ### Usage

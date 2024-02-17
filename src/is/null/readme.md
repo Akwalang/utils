@@ -3,7 +3,7 @@
 Checks if value is null
 
 ```javascript
-import isNull from '@utils/is/null';
+import { isNull } from '@utils/is/null';
 ```
 
 ### Usage

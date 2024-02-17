@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import remove from '${meta.npm.name}/file/remove';`,
+            content: `import { remove } from '${meta.npm.name}/file/remove';`,
           },
         },
       ],

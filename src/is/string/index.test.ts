@@ -1,4 +1,4 @@
-import isString from '.';
+import { isString } from '.';
 
 test('Is.string', () => {
   expect(isString('function')).toBe(true);

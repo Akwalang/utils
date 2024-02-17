@@ -1,4 +1,4 @@
-export = function chunk<T>(array: T[], size: number): T[][] {
+export const chunk = function chunk<T>(array: T[], size: number): T[][] {
   size = Math.max(size, 1);
 
   const result = [];
@@ -8,4 +8,4 @@ export = function chunk<T>(array: T[], size: number): T[][] {
   }
 
   return result;
-}
+};

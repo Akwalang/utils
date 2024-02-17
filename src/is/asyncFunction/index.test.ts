@@ -1,4 +1,4 @@
-import isAsyncFunction from '.';
+import { isAsyncFunction } from '.';
 
 test('Is.isAsyncFunction', () => {
   expect(isAsyncFunction(async function () {})).toBe(true);

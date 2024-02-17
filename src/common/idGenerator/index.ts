@@ -24,6 +24,6 @@ function idGenerator(prefix?: null | string, postfix?: string) {
   next.setMax = (top: number): typeof next => (max = top, next);
 
   return next;
-}
+};
 
-export = idGenerator;
+export { idGenerator as idGenerator };

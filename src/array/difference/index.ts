@@ -18,6 +18,6 @@ function difference<T>(a: T[], b: T[], worker: Getter<T> | Comparator<T> = DEFAU
   }
 
   return a.filter(av => !b.find(bv => comparator(av, bv)));
-}
+};
 
-export = difference;
+export { difference as difference };

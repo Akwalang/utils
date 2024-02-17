@@ -1,4 +1,4 @@
-import create from '.';
+import { create } from '.';
 
 test('Array.create: count', () => {
   const result = create(5);

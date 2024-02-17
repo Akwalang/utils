@@ -1,0 +1,10 @@
+declare type AnyRecord = Record<any, any>;
+declare type Direction = 'asc' | 'desc';
+declare type CompareResult = -1 | 0 | 1;
+declare type Directions = string | Direction | Direction[];
+declare type Field = string;
+declare type Getter<T> = (item: T) => string | number;
+declare type KeysList<T> = Field | Getter<T> | (Field | Getter<T>)[];
+declare type Comparator = (a: any, b: any) => CompareResult;
+export declare const createSorter: <T extends AnyRecord>(keys?: KeysList<T> | null, dirs?: Directions) => Comparator;
+export {};

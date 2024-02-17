@@ -3,7 +3,7 @@
 Return array of different items in 2 arrays
 
 ```javascript
-import difference from '@utils/array/difference';
+import { difference } from '@utils/array/difference';
 ```
 
 ### Usage #1

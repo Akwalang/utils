@@ -1,8 +1,8 @@
-import isArray from '../../is/array';
-import isString from '../../is/string';
-import isFunction from '../../is/function';
+import { isArray } from '../../is/array';
+import { isString } from '../../is/string';
+import { isFunction } from '../../is/function';
 
-import getter from '../../object/getter';
+import { getter } from '../../object/getter';
 
 type AnyRecord = Record<any, any>;
 
@@ -47,7 +47,7 @@ const direction2multiplier = (dir: Direction): Multiplier => {
   return 1;
 };
 
-function createSorter<T extends AnyRecord>(keys: null | KeysList<T> = null, dirs: Directions = 'asc'): Comparator {
+export const createSorter = function createSorter<T extends AnyRecord>(keys: null | KeysList<T> = null, dirs: Directions = 'asc'): Comparator {
   const dirsList = isArray(dirs) ? dirs : sliceDirections(dirs);
 
   const multipliers: Multiplier[] = dirsList.map(direction2multiplier);
@@ -86,6 +86,4 @@ function createSorter<T extends AnyRecord>(keys: null | KeysList<T> = null, dirs
 
     return result;
   };
-}
-
-export = createSorter;
+};

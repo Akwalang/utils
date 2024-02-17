@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import random from '${meta.npm.name}/common/random';`,
+            content: `import { random } from '${meta.npm.name}/common/random';`,
           },
         },
       ],

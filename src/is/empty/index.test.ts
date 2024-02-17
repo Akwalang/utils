@@ -1,4 +1,4 @@
-import isEmpty from '.';
+import { isEmpty } from '.';
 
 test('Is.empty', () => {
   expect(isEmpty('')).toBe(true);

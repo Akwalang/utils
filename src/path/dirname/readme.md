@@ -3,7 +3,7 @@
 Get dirname from import.meta data
 
 ```javascript
-import dirname from '@utils/path/dirname';
+import { dirname } from '@utils/path/dirname';
 ```
 
 ### Usage

@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import isString from '${meta.npm.name}/is/string';`,
+            content: `import { isString } from '${meta.npm.name}/is/string';`,
           },
         },
       ],

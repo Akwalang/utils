@@ -1,4 +1,4 @@
-import capitalize from '.';
+import { capitalize } from '.';
 
 test('String.capitalize', () => {
   const result = capitalize('some string');

@@ -1,5 +1,5 @@
-import throttle from '.';
-import deferred from '../deferred';
+import { throttle } from '.';
+import { deferred } from '../deferred';
 
 test('Common.throttle: delay only', async () => {
   const start = +new Date();

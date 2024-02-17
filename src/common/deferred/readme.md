@@ -3,7 +3,7 @@
 Create an instance of Promise which can be resolved/rejected from outside
 
 ```javascript
-import deferred from '@utils/common/deferred';
+import { deferred } from '@utils/common/deferred';
 ```
 
 ### Usage

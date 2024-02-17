@@ -1,6 +1,6 @@
-const resolve = require('../../dist/path/resolve/index.js');
-const readFile = require('../../dist/file/read/index.js');
-const readDeepDir = require('../../dist/directory/readDeep/index.js');
+const resolve = require('../../dist/path/resolve/index.js').resolve;
+const readFile = require('../../dist/file/read/index.js').read;
+const readDeepDir = require('../../dist/directory/readDeep/index.js').readDeep;
 
 const root = resolve(__dirname, '../../src');
 

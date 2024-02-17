@@ -3,7 +3,7 @@
 Checks if value is classified as an instance of Date
 
 ```javascript
-import isDate from '@utils/is/date';
+import { isDate } from '@utils/is/date';
 ```
 
 ### Usage

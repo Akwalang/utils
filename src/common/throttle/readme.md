@@ -3,7 +3,7 @@
 Create function which accumulate call arguments and will run callback with accumulated arguments after timeout
 
 ```javascript
-import throttle from '@utils/common/throttle';
+import { throttle } from '@utils/common/throttle';
 ```
 
 ### Usage #1

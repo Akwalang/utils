@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import args from '${meta.npm.name}/process/args';`,
+            content: `import { args } from '${meta.npm.name}/process/args';`,
           },
         },
       ],

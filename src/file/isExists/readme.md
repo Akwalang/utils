@@ -3,7 +3,7 @@
 Check is file exists
 
 ```javascript
-import isExists from '@utils/file/isExists';
+import { isExists } from '@utils/file/isExists';
 ```
 
 ### Usage

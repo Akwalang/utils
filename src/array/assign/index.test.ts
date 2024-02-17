@@ -1,4 +1,4 @@
-import assign from '.';
+import { assign } from '.';
 
 test('Array.assign', () => {
   const array = [

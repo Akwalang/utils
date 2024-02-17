@@ -3,7 +3,7 @@
 Checks if value is a plain object
 
 ```javascript
-import isPlainObject from '@utils/is/plain object';
+import { isPlainObject } from '@utils/is/plain object';
 ```
 
 ### Usage

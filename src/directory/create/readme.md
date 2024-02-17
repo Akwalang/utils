@@ -3,7 +3,7 @@
 Recursively create directory in provided path
 
 ```javascript
-import create from '@utils/directory/create';
+import { create } from '@utils/directory/create';
 ```
 
 ### Usage

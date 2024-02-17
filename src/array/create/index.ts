@@ -1,6 +1,6 @@
-import isNumber from '../../is/number';
-import isUndefined from '../../is/undefined';
-import isAsyncFunction from '../../is/asyncFunction';
+import { isNumber } from '../../is/number';
+import { isUndefined } from '../../is/undefined';
+import { isAsyncFunction } from '../../is/asyncFunction';
 
 type SyncTransform<T> = (i: number) => T;
 type AsyncTransform<T> = (i: number) => Promise<T>;
@@ -57,6 +57,6 @@ function create<T>(from: number, to?: number | SyncTransform<T> | AsyncTransform
   }
 
   throw new Error('array.create received wrong arguments: ' + [...arguments]);
-}
+};
 
-export = create;
+export { create as create };

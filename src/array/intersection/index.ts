@@ -1,6 +1,6 @@
 import { type Comparator, isComparator, DEFAULT_COMPARATOR } from '../utils';
 
-function intersection<T>(comparator: Comparator<T> | T[], ...arrays: T[][]) {
+export const intersection = function intersection<T>(comparator: Comparator<T> | T[], ...arrays: T[][]) {
   const items = isComparator(comparator) ? arrays : [comparator, ...arrays] as T[][];
   const compare = isComparator(comparator) ? comparator : DEFAULT_COMPARATOR;
 
@@ -13,6 +13,4 @@ function intersection<T>(comparator: Comparator<T> | T[], ...arrays: T[][]) {
 
     return true;
   });
-}
-
-export = intersection;
+};

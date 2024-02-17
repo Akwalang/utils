@@ -3,7 +3,7 @@
 Make deep comparison of two values
 
 ```javascript
-import isEqual from '@utils/is/equal';
+import { isEqual } from '@utils/is/equal';
 ```
 
 ### Usage

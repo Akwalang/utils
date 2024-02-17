@@ -1,6 +1,6 @@
 import path from 'path';
 
-import resolve from '.';
+import { resolve } from '.';
 
 test('Path.resolve: strings', () => {
   const src = resolve('first', 'second', 'third');

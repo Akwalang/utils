@@ -1,3 +1,3 @@
-export = function replaceAll(value: string, sub: string, replacer: string): string {
+export const replaceAll = function replaceAll(value: string, sub: string, replacer: string): string {
   return value.split(sub).join(replacer);
-}
+};

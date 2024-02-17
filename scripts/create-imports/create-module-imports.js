@@ -1,5 +1,5 @@
-const writeFile = require('../../dist/file/write/index.js');
-const readDeepDir = require('../../dist/directory/readDeep/index.js');
+const writeFile = require('../../dist/file/write/index.js').write;
+const readDeepDir = require('../../dist/directory/readDeep/index.js').readDeep;
 
 module.exports = async function createModuleImports(root, src) {
   const list = await readDeepDir(src);
@@ -20,7 +20,7 @@ module.exports = async function createModuleImports(root, src) {
   }, {});
 
   const stack = Object.keys(modules).map(name => {
-    const line = (method) => `export { default as ${method} } from './${method}';\n`;
+    const line = (method) => `export * from './${method}';\n`;
 
     const content = modules[name].map(line).join('');
 

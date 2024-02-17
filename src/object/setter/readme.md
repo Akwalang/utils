@@ -3,7 +3,7 @@
 Return value in object by provided path
 
 ```javascript
-import setter from '@utils/object/setter';
+import { setter } from '@utils/object/setter';
 ```
 
 ### Usage

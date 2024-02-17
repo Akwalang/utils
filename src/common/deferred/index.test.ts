@@ -1,4 +1,4 @@
-import deferred from '.';
+import { deferred } from '.';
 
 test('Common.deferred: resolve', async () => {
   const defer = deferred();

@@ -3,7 +3,7 @@
 Checks if value is a string
 
 ```javascript
-import isString from '@utils/is/string';
+import { isString } from '@utils/is/string';
 ```
 
 ### Usage

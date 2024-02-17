@@ -1,6 +1,6 @@
-import read from '.';
-import write from '../write';
-import remove from '../remove';
+import { read } from '.';
+import { write } from '../write';
+import { remove } from '../remove';
 
 test('File.write', async () => {
   const target = [__dirname, 'test-file.txt'];

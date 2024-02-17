@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import write from '${meta.npm.name}/debug/write';`,
+            content: `import { write } from '${meta.npm.name}/debug/write';`,
           },
         },
       ],
@@ -66,7 +66,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_RETURN,
           result: {
             type: 'Promise<undefined>',
-            description: 'promise that will be resolved after write operation will finish',
+            description: 'promise that will be resolved after write operation will be finished',
           },
         },
       ],

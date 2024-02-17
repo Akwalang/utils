@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import assign from '${meta.npm.name}/array/assign';`,
+            content: `import { assign } from '${meta.npm.name}/array/assign';`,
           },
         },
       ],

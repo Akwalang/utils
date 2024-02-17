@@ -3,7 +3,7 @@
 Map items in array and assign return values to accumulator object.
 
 ```javascript
-import assign from '@utils/array/assign';
+import { assign } from '@utils/array/assign';
 ```
 
 ### Usage

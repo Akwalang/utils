@@ -1,4 +1,4 @@
-import combine from '.';
+import { combine } from '.';
 
 test('Array.combine: same length', () => {
   const result = combine(['a', 'b', 'c'], [1, 2, 3]);

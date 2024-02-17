@@ -3,7 +3,7 @@
 Returns random number between 2 values
 
 ```javascript
-import random from '@utils/common/random';
+import { random } from '@utils/common/random';
 ```
 
 ### Usage #1

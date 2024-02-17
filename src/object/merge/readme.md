@@ -3,7 +3,7 @@
 Update first object by values from the second object. Array will not be merged only replaced.
 
 ```javascript
-import merge from '@utils/object/merge';
+import { merge } from '@utils/object/merge';
 ```
 
 ### Usage

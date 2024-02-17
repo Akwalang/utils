@@ -1,4 +1,4 @@
-import isFunction from '.';
+import { isFunction } from '.';
 
 test('Is.function', () => {
   expect(isFunction(function () {})).toBe(true);

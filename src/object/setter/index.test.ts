@@ -1,4 +1,4 @@
-import setter from '.';
+import { setter } from '.';
 
 test('Object.setter: top set', () => {
   const target = {

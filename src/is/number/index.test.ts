@@ -1,4 +1,4 @@
-import isNumber from '.';
+import { isNumber } from '.';
 
 test('Is.number', () => {
   expect(isNumber(125)).toBe(true);

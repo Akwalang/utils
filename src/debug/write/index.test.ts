@@ -1,7 +1,7 @@
-import write from '.';
+import { write } from '.';
 
-import isExistsFile from '../../file/isExists';
-import removeFile from '../../file/remove';
+import { isExists as isExistsFile } from '../../file/isExists';
+import { remove as removeFile } from '../../file/remove';
 
 test('Debug.write', async () => {
   await write([1, 2, 3, 4, { test: true }]);

@@ -1,4 +1,4 @@
-import tokenGenerator from '.';
+import { tokenGenerator } from '.';
 
 test('Common.tokenGenerator: default letters', () => {
   const token = tokenGenerator(8);

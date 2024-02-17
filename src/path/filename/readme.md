@@ -3,7 +3,7 @@
 Get filename from import.meta data
 
 ```javascript
-import filename from '@utils/path/filename';
+import { filename } from '@utils/path/filename';
 ```
 
 ### Usage

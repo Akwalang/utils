@@ -3,7 +3,7 @@
 Return value in object by provided path
 
 ```javascript
-import getter from '@utils/object/getter';
+import { getter } from '@utils/object/getter';
 ```
 
 ### Usage
@@ -37,7 +37,7 @@ const data = {
 
 [
   getter(data, 'a[0][0].b.c'),
-  getter(data, 'a[0][1].b.c')
+  getter(data, 'a[1][0].b.c')
 ];
 ```
 

@@ -1,4 +1,4 @@
-import isNaN from '../is/nan';
+import { isNaN } from '../is/nan';
 
 export type Comparator<T> = (a: T, b: T) => boolean;
 

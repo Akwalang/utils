@@ -1,2 +1,2 @@
-export { default as args } from './args';
-export { default as getStack } from './getStack';
+export * from './args';
+export * from './getStack';

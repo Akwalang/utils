@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import isUndefined from '${meta.npm.name}/is/undefined';`,
+            content: `import { isUndefined } from '${meta.npm.name}/is/undefined';`,
           },
         },
       ],

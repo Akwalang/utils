@@ -1,4 +1,4 @@
-import isDate from '.';
+import { isDate } from '.';
 
 test('Is.date', () => {
   class Class {}

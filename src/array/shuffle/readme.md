@@ -3,7 +3,7 @@
 Shuffle array items
 
 ```javascript
-import shuffle from '@utils/array/shuffle';
+import { shuffle } from '@utils/array/shuffle';
 ```
 
 ### Usage

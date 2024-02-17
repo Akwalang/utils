@@ -3,7 +3,7 @@
 Create array with prefilled values.
 
 ```javascript
-import create from '@utils/array/create';
+import { create } from '@utils/array/create';
 ```
 
 ### Usage #1

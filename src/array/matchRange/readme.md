@@ -3,7 +3,7 @@
 Calculate range of values based on items in the passed array
 
 ```javascript
-import matchRange from '@utils/array/matchRange';
+import { matchRange } from '@utils/array/matchRange';
 ```
 
 ### Usage

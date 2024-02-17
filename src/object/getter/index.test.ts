@@ -1,4 +1,4 @@
-import getter from '.';
+import { getter } from '.';
 
 test('Object.getter: value', () => {
   const data = {

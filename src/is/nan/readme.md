@@ -3,7 +3,7 @@
 Checks if value is a NaN
 
 ```javascript
-import isNaN from '@utils/is/nan';
+import { isNaN } from '@utils/is/nan';
 ```
 
 ### Usage

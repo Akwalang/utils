@@ -1,4 +1,4 @@
-import stat from '.';
+import { stat } from '.';
 
 test('Path.stat: directory', async () => {
   const data = await stat(__dirname);

@@ -3,7 +3,7 @@
 Concat arrays into one and remove duplicate items
 
 ```javascript
-import union from '@utils/array/union';
+import { union } from '@utils/array/union';
 ```
 
 ### Usage

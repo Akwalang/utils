@@ -1,4 +1,4 @@
-import jsonParse from '.';
+import { jsonParse } from '.';
 
 test('Common.jsonParse: valid', () => {
   const parsed = jsonParse('{"name":123}');

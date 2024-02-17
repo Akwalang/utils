@@ -1,9 +1,9 @@
-import read from '.';
+import { read } from '.';
 
 test('Directory.read: read directory', async () => {
   const files = await read(__dirname);
 
-  expect(files).toEqual(['index.test.ts', 'index.ts', 'readme.doc.js']);
+  expect(files).toEqual(['index.test.ts', 'index.ts', 'readme.doc.js', 'readme.md']);
 });
 
 test('Directory.read: read file', async () => {

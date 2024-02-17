@@ -1,4 +1,4 @@
-import args from '.';
+import { args } from '.';
 
 test('Process.args', () => {
   const result = args([

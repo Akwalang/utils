@@ -1,15 +1,18 @@
-import { type Comparator, DEFAULT_COMPARATOR } from '../utils';
+type GetId<T> = (value: T) => string | number | T;
 
-export = function deduplicate<T>(target: T[], comparator?: Comparator<T>): T[] {
-  comparator = comparator || DEFAULT_COMPARATOR;
+export const deduplicate = function deduplicate<T>(
+  target: T[],
+  getId: GetId<T> = value => value,
+): T[] {
+  const map: Record<any, any> = {};
 
-  for (let i = 0; i < target.length - 1; i++) {
-    for (let j = i + 1; j < target.length; j++) {
-      if (comparator(target[i], target[j])) {
-        target.splice(j--, 1);
-      }
-    }
+  for (let i = 0, len = target.length; i < len; i++) {
+    const id = '' + getId(target[i]);
+
+    if (id in map) continue;
+
+    map[id] = target[i];
   }
 
-  return target;
+  return Object.values(map);
 };

@@ -1,4 +1,4 @@
-import filename from '.';
+import { filename } from '.';
 
 test('Path.filename', () => {
   const url = 'file:///' + __filename.split('\\').join('/');

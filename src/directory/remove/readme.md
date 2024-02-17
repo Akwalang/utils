@@ -3,7 +3,7 @@
 Remove empty of filled directory
 
 ```javascript
-import remove from '@utils/directory/remove';
+import { remove } from '@utils/directory/remove';
 ```
 
 ### Usage

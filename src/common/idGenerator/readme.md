@@ -3,7 +3,7 @@
 Create function which return on every call next number or next string
 
 ```javascript
-import idGenerator from '@utils/common/idGenerator';
+import { idGenerator } from '@utils/common/idGenerator';
 ```
 
 ### Usage #1

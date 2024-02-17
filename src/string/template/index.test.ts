@@ -1,4 +1,4 @@
-import template from '.';
+import { template } from '.';
 
 test('String.template: top level', () => {
   const result = template(

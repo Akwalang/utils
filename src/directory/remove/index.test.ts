@@ -1,7 +1,7 @@
-import remove from '.';
-import create from '../create';
+import { remove } from '.';
+import { create } from '../create';
 
-import stat from '../../path/stat';
+import { stat } from '../../path/stat';
 
 test('Directory.remove', async () => {
   await create([__dirname, 'qwerty', 'asd', '123']);

@@ -3,7 +3,7 @@
 Checks if value is a number
 
 ```javascript
-import isNumber from '@utils/is/number';
+import { isNumber } from '@utils/is/number';
 ```
 
 ### Usage

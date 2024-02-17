@@ -1,4 +1,4 @@
-import isUndefined from '.';
+import { isUndefined } from '.';
 
 test('Is.undefined', () => {
   expect(isUndefined(undefined)).toBe(true);

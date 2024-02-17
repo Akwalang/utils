@@ -1,4 +1,4 @@
-import isEqual from '.';
+import { isEqual } from '.';
 
 test('Is.isEqual', () => {
   const date = new Date();

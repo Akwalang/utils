@@ -1,4 +1,4 @@
-import intersection from '.';
+import { intersection } from '.';
 
 test('Array.intersection: default comparator', () => {
   const result = intersection([1, 2, 3, 4, 5], [3, 2, 5], [1, 5, 4, 2]);

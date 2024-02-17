@@ -1,13 +1,13 @@
 import fs from 'fs/promises';
 import { dirname } from 'path';
 
-import createDir from '../../directory/create';
-import resolve from '../../path/resolve';
+import { create as createDir } from '../../directory/create';
+import { resolve } from '../../path/resolve';
 
 type Data = Parameters<typeof fs.writeFile>[1];
 type Options = Parameters<typeof fs.writeFile>[2];
 
-export = async function write(
+export const write = async function write(
   dest: string | string[],
   data: Data,
   options?: Options
@@ -18,4 +18,4 @@ export = async function write(
   await createDir(directory);
 
   return fs.writeFile(dest, data, options);
-}
+};

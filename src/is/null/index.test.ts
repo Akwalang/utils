@@ -1,4 +1,4 @@
-import isNull from '.';
+import { isNull } from '.';
 
 test('Is.null', () => {
   expect(isNull(null)).toBe(true);

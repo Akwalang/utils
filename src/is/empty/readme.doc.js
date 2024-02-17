@@ -22,7 +22,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import isEmpty from '${meta.npm.name}/is/empty';`,
+            content: `import { isEmpty } from '${meta.npm.name}/is/empty';`,
           },
         },
       ],

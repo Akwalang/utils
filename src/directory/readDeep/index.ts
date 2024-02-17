@@ -1,8 +1,8 @@
-import resolve from '../../path/resolve';
+import { resolve } from '../../path/resolve';
 
-import read from '../read';
+import { read } from '../read';
 
-export = async function readDeep(path: string | string[]): Promise<string[]> {
+export const readDeep = async function readDeep(path: string | string[]): Promise<string[]> {
   let items = await read(path);
 
   items = items.map(item => resolve(path, item));
@@ -16,4 +16,4 @@ export = async function readDeep(path: string | string[]): Promise<string[]> {
   }
 
   return result;
-}
+};

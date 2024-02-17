@@ -1,4 +1,4 @@
-export { default as isExists } from './isExists';
-export { default as read } from './read';
-export { default as remove } from './remove';
-export { default as write } from './write';
+export * from './isExists';
+export * from './read';
+export * from './remove';
+export * from './write';

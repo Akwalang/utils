@@ -3,7 +3,7 @@
 Check is directory exists
 
 ```javascript
-import isExists from '@utils/directory/isExists';
+import { isExists } from '@utils/directory/isExists';
 ```
 
 ### Usage

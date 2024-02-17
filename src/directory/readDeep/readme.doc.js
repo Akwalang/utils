@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import readDeep from '${meta.npm.name}/directory/readDeep';`,
+            content: `import { readDeep } from '${meta.npm.name}/directory/readDeep';`,
           },
         },
       ],

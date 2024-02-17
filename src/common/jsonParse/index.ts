@@ -8,4 +8,4 @@ function jsonParse<T, F>(value: string | undefined, fallback?: F): string | unde
   }
 }
 
-export = jsonParse;
+export { jsonParse as jsonParse };

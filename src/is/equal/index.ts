@@ -1,11 +1,11 @@
-import isNaN from '../nan';
-import isDate from '../date';
-import isArray from '../array';
-import isObject from '../object';
+import { isNaN } from '../nan';
+import { isDate } from '../date';
+import { isArray } from '../array';
+import { isObject } from '../object';
 
 const _hasOwnProperty = Object.prototype.hasOwnProperty;
 
-export = function isEqual(a: any, b: any): boolean {
+export const isEqual = function isEqual(a: any, b: any): boolean {
   if (isNaN(a) && isNaN(b)) return true;
   if (isDate(a) && isDate(b)) return +a === +b;
 
@@ -31,4 +31,4 @@ export = function isEqual(a: any, b: any): boolean {
   }
 
   return a === b;
-}
+};

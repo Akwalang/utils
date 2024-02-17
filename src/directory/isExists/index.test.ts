@@ -1,4 +1,4 @@
-import isExists from '.';
+import { isExists } from '.';
 
 test('Directory.isExists: existing directory', async () => {
   const exists = await isExists(__dirname);

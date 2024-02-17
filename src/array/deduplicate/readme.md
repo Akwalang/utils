@@ -1,21 +1,21 @@
 ## array.deduplicate
 
-Deduplicate elements in array comparing items one to each other.
+Create dictionary object and check is key with taken id exists in it.
 
 ```javascript
-import deduplicate from '@utils/array/deduplicate';
+import { deduplicate } from '@utils/array/deduplicateUsingMap';
 ```
 
 ### Usage
 
 ```javascript
-deduplicate(array[, comparator = DEFAULT_COMPARATOR])
+deduplicate(array[, getId = v => v])
 ```
 
 **Params:**
 
 * **array**: T[] - array of values
-* **comparator**: (a: T, b: T) => boolean _[default: (a, b) => a === b || isNaN(a) && isNaN(b)]_ - function to compare values
+* **getId**: (v: T) => number | string _[default: v => v]_ - function returns item id
 
 **Return:**
 
@@ -29,7 +29,7 @@ const list = [
   { value: 2 }, { value: 3 }, { value: 3 },
 ];
 
-const comparator = (a, b) => a.value === b.value;
+const comparator = (v) => v.value;
 
 deduplicate(list, comparator);
 ```

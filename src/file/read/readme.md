@@ -3,7 +3,7 @@
 Return content of file
 
 ```javascript
-import read from '@utils/file/read';
+import { read } from '@utils/file/read';
 ```
 
 ### Usage

@@ -3,7 +3,7 @@
 Find elements which exists in every array
 
 ```javascript
-import intersection from '@utils/array/intersection';
+import { intersection } from '@utils/array/intersection';
 ```
 
 ### Usage

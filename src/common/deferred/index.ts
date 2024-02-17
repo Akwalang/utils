@@ -3,7 +3,7 @@ type Reject = (reason?: any) => void;
 
 type Deferred<T> = Promise<T> & { resolve: Resolve<T>, reject: Reject };
 
-export = function deferred<T = void>(
+export const deferred = function deferred<T = void>(
   callback?: (resolve: Resolve<T>, reject: Reject, deferred: Deferred<T>) => void
 ): Deferred<T> {
   let resolve: Resolve<T>, reject: Reject;

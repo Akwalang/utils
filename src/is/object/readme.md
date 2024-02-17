@@ -3,7 +3,7 @@
 Checks if value is an object
 
 ```javascript
-import isObject from '@utils/is/object';
+import { isObject } from '@utils/is/object';
 ```
 
 ### Usage

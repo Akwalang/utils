@@ -1,9 +1,9 @@
 import fs from 'fs/promises';
-import _fs from 'fs';
+import { Stats } from 'fs';
 
-import resolve from '../resolve';
+import { resolve } from '../resolve';
 
-export = async function stat(...path: (string | string[])[]): Promise<_fs.Stats | null> {
+export const stat = async function stat(...path: (string | string[])[]): Promise<Stats | null> {
   const target = resolve(...path);
 
   try {
@@ -11,4 +11,4 @@ export = async function stat(...path: (string | string[])[]): Promise<_fs.Stats 
   } catch (e) {
     return null;
   }
-}
+};

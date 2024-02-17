@@ -1,5 +1,5 @@
-import getType from '../../types/get';
+import { getType } from '../../types/getType';
 
-export = function number(value: any): value is number {
+export const isNumber = function isNumber(value: any): value is number {
   return getType(value) === 'Number';
-}
+};

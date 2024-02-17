@@ -1,12 +1,12 @@
-import resolve from '../../path/resolve';
-import stat from '../../path/stat';
+import { resolve } from '../../path/resolve';
+import { stat } from '../../path/stat';
 
-import removeDirectory from '../remove';
-import removeFile from '../../file/remove';
+import { remove as removeDirectory } from '../remove';
+import { remove as removeFile } from '../../file/remove';
 
-import read from '../read';
+import { read } from '../read';
 
-export = async function clean(...path: (string | string[])[]): Promise<void> {
+export const clean = async function clean(...path: (string | string[])[]): Promise<void> {
   const target = resolve(...path);
 
   const children = await read(target);
@@ -19,4 +19,4 @@ export = async function clean(...path: (string | string[])[]): Promise<void> {
     if (stt && stt.isDirectory()) await removeDirectory(child);
     if (stt && stt.isFile()) await removeFile(child);
   }
-}
+};

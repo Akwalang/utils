@@ -3,7 +3,7 @@
 Get args from process parameters
 
 ```javascript
-import args from '@utils/process/args';
+import { args } from '@utils/process/args';
 ```
 
 ### Usage

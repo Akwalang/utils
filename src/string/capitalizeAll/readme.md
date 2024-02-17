@@ -3,7 +3,7 @@
 Apply uppercase to first letter of each word
 
 ```javascript
-import capitalizeAll from '@utils/string/capitalizeAll';
+import { capitalizeAll } from '@utils/string/capitalizeAll';
 ```
 
 ### Usage

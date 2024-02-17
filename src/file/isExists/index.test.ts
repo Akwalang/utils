@@ -1,4 +1,4 @@
-import isExists from '.';
+import { isExists } from '.';
 
 test('File.isExists: existing file', async () => {
   const exists = await isExists(__dirname, 'index.ts');

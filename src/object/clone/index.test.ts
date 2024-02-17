@@ -1,4 +1,4 @@
-import clone from '.';
+import { clone } from '.';
 
 test('Object.clone', async () => {
   const data = {

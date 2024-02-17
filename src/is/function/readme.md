@@ -3,7 +3,7 @@
 Checks if value is classified as an instance of Function
 
 ```javascript
-import isFunction from '@utils/is/function';
+import { isFunction } from '@utils/is/function';
 ```
 
 ### Usage

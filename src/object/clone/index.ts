@@ -1,12 +1,12 @@
-import isDate from '../../is/date';
-import isArray from '../../is/array';
-import isPlainObject from '../../is/plainObject';
+import { isDate } from '../../is/date';
+import { isArray } from '../../is/array';
+import { isPlainObject } from '../../is/plainObject';
 
 const hop = Object.prototype.hasOwnProperty;
 
 const TYPES = [Number, String, Boolean];
 
-export = function clone<T>(entity: T): T {
+export const clone = function clone<T>(entity: T): T {
   // null, undefined, NaN values check
   if (!entity) return entity;
 
@@ -34,4 +34,4 @@ export = function clone<T>(entity: T): T {
   }
 
   return entity;
-}
+};

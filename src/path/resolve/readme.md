@@ -3,7 +3,7 @@
 Check is path exists
 
 ```javascript
-import resolve from '@utils/path/resolve';
+import { resolve } from '@utils/path/resolve';
 ```
 
 ### Usage

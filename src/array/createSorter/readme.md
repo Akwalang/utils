@@ -3,7 +3,7 @@
 Create sorter function which can be passed into array.prototype.sort method.
 
 ```javascript
-import createSorter from '@utils/array/createSorter';
+import { createSorter } from '@utils/array/createSorter';
 ```
 
 ### Usage #1

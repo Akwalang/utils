@@ -1,8 +1,8 @@
-const readFile = require('../../dist/file/read/index.js');
-const writeFile = require('../../dist/file/write/index.js');
+const readFile = require('../../dist/file/read/index.js').read;
+const writeFile = require('../../dist/file/write/index.js').write;
 
-const readDeepDir = require('../../dist/directory/readDeep/index.js');
-const createSorter = require('../../dist/array/createSorter/index.js');
+const readDeepDir = require('../../dist/directory/readDeep/index.js').readDeep;
+const createSorter = require('../../dist/array/createSorter/index.js').createSorter;
 
 module.exports = async function updatePackageExports(root, dist) {
   const list = await readDeepDir(dist);

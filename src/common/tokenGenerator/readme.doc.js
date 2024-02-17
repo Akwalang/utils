@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import tokenGenerator from '${meta.npm.name}/common/tokenGenerator';`,
+            content: `import { tokenGenerator } from '${meta.npm.name}/common/tokenGenerator';`,
           },
         },
       ],

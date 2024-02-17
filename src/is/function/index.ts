@@ -1,5 +1,5 @@
-import getType from '../../types/get';
+import { getType } from '../../types/getType';
 
-export = function isFunction(value: any): value is Function {
+export const isFunction = function isFunction(value: any): value is Function {
   return getType(value) === 'Function';
-}
+};

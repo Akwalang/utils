@@ -1,8 +1,8 @@
-import clean from '.';
+import { clean } from '.';
 
-import read from '../read';
-import create from '../create';
-import remove from '../remove';
+import { read } from '../read';
+import { create } from '../create';
+import { remove } from '../remove';
 
 test('Directory.clean', async () => {
   await create(__dirname, 'qwerty', 'asd', '123');

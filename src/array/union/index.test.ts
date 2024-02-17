@@ -1,4 +1,4 @@
-import union from '.';
+import { union } from '.';
 
 test('Array.union: default comparator', () => {
   const result = union([1, 2, 3], [3, 1, 4], [4, 4, 3, 2, 5]);

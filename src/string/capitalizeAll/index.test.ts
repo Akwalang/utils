@@ -1,4 +1,4 @@
-import capitalizeAll from '.';
+import { capitalizeAll } from '.';
 
 test('String.capitalizeAll', () => {
   const result = capitalizeAll('qwe, asd. zxc 8rty');

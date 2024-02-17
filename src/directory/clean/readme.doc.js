@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import clean from '${meta.npm.name}/directory/clean';`,
+            content: `import { clean } from '${meta.npm.name}/directory/clean';`,
           },
         },
       ],

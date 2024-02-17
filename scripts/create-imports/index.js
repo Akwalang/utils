@@ -1,4 +1,4 @@
-const resolve = require('../../dist/path/resolve/index.js');
+const resolve = require('../../dist/path/resolve/index.js').resolve;
 
 const createModuleImports = require('./create-module-imports.js');
 const updatePackageExports = require('./update-package-exports.js');

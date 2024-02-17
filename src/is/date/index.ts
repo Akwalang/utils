@@ -1,3 +1,3 @@
-export = function isDate(value: any): value is Date {
+export const isDate = function isDate(value: any): value is Date {
   return value instanceof Date;
-}
+};

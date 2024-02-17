@@ -3,7 +3,7 @@
 Return deep copy of provided value
 
 ```javascript
-import clone from '@utils/object/clone';
+import { clone } from '@utils/object/clone';
 ```
 
 ### Usage

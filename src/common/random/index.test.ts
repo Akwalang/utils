@@ -1,8 +1,8 @@
-import random from '.';
+import { random } from '.';
 
-import create from '../../array/create';
-import difference from '../../array/difference';
-import matchRange from '../../array/matchRange';
+import { create } from '../../array/create';
+import { difference } from '../../array/difference';
+import { matchRange } from '../../array/matchRange';
 
 test('Common.random: floor true', () => {
   const result: Record<number, number> = {};

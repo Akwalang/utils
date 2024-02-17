@@ -3,7 +3,7 @@
 Return full paths of deep directories and files inside of target folder
 
 ```javascript
-import readDeep from '@utils/directory/readDeep';
+import { readDeep } from '@utils/directory/readDeep';
 ```
 
 ### Usage

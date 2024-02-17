@@ -3,7 +3,7 @@
 Get files list of call stack till the place where it was called
 
 ```javascript
-import getStack from '@utils/process/getStack';
+import { getStack } from '@utils/process/getStack';
 ```
 
 ### Usage

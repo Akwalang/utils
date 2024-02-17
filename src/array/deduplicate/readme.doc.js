@@ -7,7 +7,7 @@ module.exports = (pkg, meta, types) => ({
         {
           type: types.CONTENT_PARAGRAPH,
           items: [
-            { text: `Deduplicate elements in array comparing items one to each other.` },
+            { text: `Create dictionary object and check is key with taken id exists in it.` },
           ],
         },
       ],
@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import deduplicate from '${meta.npm.name}/array/deduplicate';`,
+            content: `import { deduplicate } from '${meta.npm.name}/array/deduplicateUsingMap';`,
           },
         },
       ],
@@ -30,7 +30,7 @@ module.exports = (pkg, meta, types) => ({
     },
     {
       type: types.SECTION_DESCRIPTION,
-      title: 'deduplicate(array[, comparator = DEFAULT_COMPARATOR])',
+      title: 'deduplicate(array[, getId = v => v])',
       content: [
         {
           type: types.CONTENT_PARAMS,
@@ -41,10 +41,10 @@ module.exports = (pkg, meta, types) => ({
               description: 'array of values',
             },
             {
-              name: 'comparator',
-              type: '(a: T, b: T) => boolean',
-              description: 'function to compare values',
-              defaultValue: '(a, b) => a === b || isNaN(a) && isNaN(b)',
+              name: 'getId',
+              type: '(v: T) => number | string',
+              description: 'function returns item id',
+              defaultValue: 'v => v',
             },
           ],
         },
@@ -71,7 +71,7 @@ module.exports = (pkg, meta, types) => ({
                 { value: 2 }, { value: 3 }, { value: 3 },
               ];
 
-              const comparator = (a, b) => a.value === b.value;
+              const comparator = (v) => v.value;
 
               deduplicate(list, comparator);
             `,

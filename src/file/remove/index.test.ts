@@ -1,7 +1,7 @@
-import write from '../write';
-import remove from '.';
+import { write } from '../write';
+import { remove } from '.';
 
-import stat from '../../path/stat';
+import { stat } from '../../path/stat';
 
 test('File.remove: remove file', async () => {
   await write([__dirname, 'test-file.txt'], 'Some test text');

@@ -8,7 +8,7 @@ type Throttler<T extends Array<any>> = {
   destroy: () => void;
 };
 
-export = function throttle<T extends Array<any>>(
+export const throttle = function throttle<T extends Array<any>>(
   callback: ThrottleCallback<T>,
   delay: number,
   delayMin?: number,
@@ -62,4 +62,4 @@ export = function throttle<T extends Array<any>>(
   };
 
   return throttler;
-}
+};

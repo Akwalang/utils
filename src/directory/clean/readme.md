@@ -3,7 +3,7 @@
 Remove all files and directories from directory
 
 ```javascript
-import clean from '@utils/directory/clean';
+import { clean } from '@utils/directory/clean';
 ```
 
 ### Usage

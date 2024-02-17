@@ -3,7 +3,7 @@
 Stringify data and write it in the file.
 
 ```javascript
-import write from '@utils/debug/write';
+import { write } from '@utils/debug/write';
 ```
 
 ### Usage

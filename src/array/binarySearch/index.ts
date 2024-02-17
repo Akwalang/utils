@@ -1,5 +1,5 @@
-import isNaN from '../../is/nan';
-import isFunction from '../../is/function';
+import { isNaN } from '../../is/nan';
+import { isFunction } from '../../is/function';
 
 type Comparator<T> = (item: T) => number;
 type Side = -1 | 0 | 1;
@@ -13,7 +13,7 @@ const createComparator= <T>(value: T) => (item: T): number => {
 
 const middle = (from: number, to: number) => Math.floor((from + to) / 2);
 
-export = function binarySearch<T>(array: T[], value: T | Comparator<T>, side: Side = 0) {
+export const binarySearch = function binarySearch<T>(array: T[], value: T | Comparator<T>, side: Side = 0) {
   let from = 0;
   let to = array.length - 1;
 
@@ -48,4 +48,4 @@ export = function binarySearch<T>(array: T[], value: T | Comparator<T>, side: Si
   }
 
   return result;
-}
+};

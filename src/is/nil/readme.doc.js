@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import isNil from '${meta.npm.name}/is/nil';`,
+            content: `import { isNil } from '${meta.npm.name}/is/nil';`,
           },
         },
       ],

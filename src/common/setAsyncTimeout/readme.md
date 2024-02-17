@@ -3,7 +3,7 @@
 Create Promise which will be resolved after setup delay
 
 ```javascript
-import setAsyncTimeout from '@utils/common/setAsyncTimeout';
+import { setAsyncTimeout } from '@utils/common/setAsyncTimeout';
 ```
 
 ### Usage

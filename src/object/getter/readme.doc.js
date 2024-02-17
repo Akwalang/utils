@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import getter from '${meta.npm.name}/object/getter';`,
+            content: `import { getter } from '${meta.npm.name}/object/getter';`,
           },
         },
       ],
@@ -78,7 +78,7 @@ module.exports = (pkg, meta, types) => ({
 
               [
                 getter(data, 'a[0][0].b.c'),
-                getter(data, 'a[0][1].b.c')
+                getter(data, 'a[1][0].b.c')
               ];
             `,
           },

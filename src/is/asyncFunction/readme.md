@@ -6,7 +6,7 @@ Notice: it will not work in case if function was transformed by to usual functio
 
 
 ```javascript
-import isAsyncFunction from '@utils/is/array';
+import { isAsyncFunction } from '@utils/is/array';
 ```
 
 ### Usage

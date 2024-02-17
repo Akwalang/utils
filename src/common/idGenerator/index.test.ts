@@ -1,4 +1,4 @@
-import idGenerator from '.';
+import { idGenerator } from '.';
 
 test('Common.idGenerator: default', () => {
   const next = idGenerator();

@@ -1,4 +1,4 @@
-import isObject from '.';
+import { isObject } from '.';
 
 test('Types.isObject', async () => {
   expect(isObject({})).toBe(true);

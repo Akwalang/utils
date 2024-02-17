@@ -3,7 +3,7 @@
 Create function which return on every call next number or next string
 
 ```javascript
-import jsonParse from '@utils/common/jsonParse';
+import { jsonParse } from '@utils/common/jsonParse';
 ```
 
 ### Usage #1

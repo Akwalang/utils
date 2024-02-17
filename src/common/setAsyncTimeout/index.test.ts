@@ -1,4 +1,4 @@
-import setAsyncTimeout from '.';
+import { setAsyncTimeout } from '.';
 
 test('Common.setAsyncTimeout', async () => {
   const time = +new Date();

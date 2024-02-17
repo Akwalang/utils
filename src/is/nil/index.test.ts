@@ -1,4 +1,4 @@
-import isNil from '.';
+import { isNil } from '.';
 
 test('Is.nil', () => {
   expect(isNil(undefined)).toBe(true);

@@ -1,5 +1,5 @@
-import getType from '../../types/get';
+import { getType } from '../../types/getType';
 
-export = function isObject(value: any): value is Record<any, any> {
+export const isObject = function isObject(value: any): value is Record<any, any> {
   return getType(value) === 'Object';
-}
+};

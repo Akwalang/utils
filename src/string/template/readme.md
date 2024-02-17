@@ -3,7 +3,7 @@
 Replace <%= plaiceHolders %> by values from params object. It also support paths.
 
 ```javascript
-import template from '@utils/string/template';
+import { template } from '@utils/string/template';
 ```
 
 ### Usage

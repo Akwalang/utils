@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import setter from '${meta.npm.name}/object/setter';`,
+            content: `import { setter } from '${meta.npm.name}/object/setter';`,
           },
         },
       ],

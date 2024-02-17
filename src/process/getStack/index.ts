@@ -18,16 +18,16 @@ function callsites(): { getFileName: () => string }[] {
   return stack;
 }
 
-export = function getStack(from?: number, to?: number): { file: string }[] {
-let [, ...stack] = callsites();
+export const getStack = function getStack(from?: number, to?: number): { file: string }[] {
+  let [, ...stack] = callsites();
 
-stack = stack.slice(from, to);
+  stack = stack.slice(from, to);
 
-return stack.map(item => {
-  let file = item.getFileName();
+  return stack.map(item => {
+    let file = item.getFileName();
 
-  file = file && file.split('\\').join('/');
+    file = file && file.split('\\').join('/');
 
-  return { file };
-});
-}
+    return { file };
+  });
+};

@@ -3,7 +3,7 @@
 In string replace every substring on replacer
 
 ```javascript
-import replaceAll from '@utils/string/replaceAll';
+import { replaceAll } from '@utils/string/replaceAll';
 ```
 
 ### Usage
