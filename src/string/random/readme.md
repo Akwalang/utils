@@ -1,15 +1,15 @@
-## common.tokenGenerator
+## string.random
 
 Generate string with required length and random chars
 
 ```javascript
-import { tokenGenerator } from '@utils/common/tokenGenerator';
+import { random } from '@utils/string/random';
 ```
 
 ### Usage
 
 ```javascript
-tokenGenerator(length[, letters = LETTERS])
+random(length[, letters = LETTERS])
 ```
 
 **Params:**
@@ -24,7 +24,7 @@ tokenGenerator(length[, letters = LETTERS])
 #### Example
 
 ```javascript
-tokenGenerator(15, '0123');
+random(15, '0123');
 ```
 
 #### Result

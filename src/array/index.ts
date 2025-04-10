@@ -4,7 +4,6 @@ export * from './chunk';
 export * from './combine';
 export * from './create';
 export * from './createSorter';
-export * from './cyclicDeduplicate';
 export * from './deduplicate';
 export * from './difference';
 export * from './intersection';

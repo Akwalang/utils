@@ -1,14 +1,14 @@
-import { type Comparator, isComparator } from '../utils';
+import { deduplicate } from '../deduplicate';
 
-import { cyclicDeduplicate } from '../cyclicDeduplicate';
+import { isFunction } from '../../is';
 
 function union<T>(...arrays: T[][]): T[];
-function union<T>(comparator: Comparator<T>, ...arrays: T[][]): T[];
-function union<T>(comparator: Comparator<T> | T[], ...arrays: T[][]): T[] {
-  const items = isComparator(comparator) ? arrays : [comparator, ...arrays] as T[][];
-  const compare = isComparator(comparator) ? comparator : undefined;
+function union<T>(getter: (v: T) => any, ...arrays: T[][]): T[];
+function union<T>(...args: [((v: T) => any), ...T[][]] | T[][]): T[] {
+  const getter = isFunction(args[0]) ? args[0] as (v: T) => any : (v: T) => v;
+  const arrays = isFunction(args[0]) ? args.slice(1) as T[][] : args as T[][];
 
-  return cyclicDeduplicate(items.flat(), compare);
+  return deduplicate(arrays.flat(), getter);
 }
 
-export { union as union };
+export { union };

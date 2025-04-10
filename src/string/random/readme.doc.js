@@ -1,5 +1,5 @@
 module.exports = (pkg, meta, types) => ({
-  title: 'array.cyclicDeduplicate',
+  title: 'string.random',
   sections: [
     {
       type: types.SECTION_PARAGRAPH,
@@ -7,7 +7,7 @@ module.exports = (pkg, meta, types) => ({
         {
           type: types.CONTENT_PARAGRAPH,
           items: [
-            { text: `Deduplicate elements in array comparing items one to each other.` },
+            { text: `Generate string with required length and random chars` },
           ],
         },
       ],
@@ -20,7 +20,7 @@ module.exports = (pkg, meta, types) => ({
           type: types.CONTENT_SCRIPT,
           script: {
             type: types.SCRIPT_JS,
-            content: `import { cyclicDeduplicate } from '${meta.npm.name}/array/deduplicate';`,
+            content: `import { random } from '${meta.npm.name}/string/random';`,
           },
         },
       ],
@@ -30,29 +30,29 @@ module.exports = (pkg, meta, types) => ({
     },
     {
       type: types.SECTION_DESCRIPTION,
-      title: 'cyclicDeduplicate(array[, comparator = DEFAULT_COMPARATOR])',
+      title: 'random(length[, letters = LETTERS])',
       content: [
         {
           type: types.CONTENT_PARAMS,
           items: [
             {
-              name: 'array',
-              type: 'T[]',
-              description: 'array of values',
+              name: 'length',
+              type: 'number',
+              description: 'size of token',
             },
             {
-              name: 'comparator',
-              type: '(a: T, b: T) => boolean',
-              description: 'function to compare values',
-              defaultValue: '(a, b) => a === b || isNaN(a) && isNaN(b)',
+              name: 'letters',
+              type: 'string',
+              description: 'string with chars for pick',
+              defaultValue: '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
             },
           ],
         },
         {
           type: types.CONTENT_RETURN,
           result: {
-            type: 'T[]',
-            description: 'array of uniq values',
+            type: 'string',
+            description: 'string with random chars',
           },
         },
       ],
@@ -66,14 +66,7 @@ module.exports = (pkg, meta, types) => ({
           script: {
             type: types.SCRIPT_JS,
             content: `
-              const list = [
-                { value: 1 }, { value: 2 }, { value: 3 }, { value: 4 },
-                { value: 2 }, { value: 3 }, { value: 3 },
-              ];
-
-              const comparator = (a, b) => a.value === b.value;
-
-              cyclicDeduplicate(list, comparator);
+              random(15, '0123');
             `,
           },
         },
@@ -88,7 +81,7 @@ module.exports = (pkg, meta, types) => ({
           script: {
             type: types.SCRIPT_JSON,
             content: `
-              [{ "value": 1 }, { "value": 2 }, { "value": 3 }, { "value": 4 }]
+              "010310123203330"
             `,
           },
         },

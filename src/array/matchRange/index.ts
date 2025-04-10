@@ -10,8 +10,8 @@ export const matchRange = function matchRange<T, F = undefined>(
   return array.reduce((result, item) => {
     const value = getValue(item);
 
-    const min = Math.min(result[0], value);
-    const max = Math.max(result[1], value);
+    const min = result[0] < value ? result[0] : value;
+    const max = result[1] > value ? result[1] : value;
 
     return [min, max];
   }, [Infinity, -Infinity]);

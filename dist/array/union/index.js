@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.union = void 0;
-const utils_1 = require("../utils");
-const cyclicDeduplicate_1 = require("../cyclicDeduplicate");
-function union(comparator, ...arrays) {
-    const items = (0, utils_1.isComparator)(comparator) ? arrays : [comparator, ...arrays];
-    const compare = (0, utils_1.isComparator)(comparator) ? comparator : undefined;
-    return (0, cyclicDeduplicate_1.cyclicDeduplicate)(items.flat(), compare);
+const deduplicate_1 = require("../deduplicate");
+const is_1 = require("../../is");
+function union(...args) {
+    const getter = (0, is_1.isFunction)(args[0]) ? args[0] : (v) => v;
+    const arrays = (0, is_1.isFunction)(args[0]) ? args.slice(1) : args;
+    return (0, deduplicate_1.deduplicate)(arrays.flat(), getter);
 }
 exports.union = union;

@@ -1,9 +1,9 @@
-## common.random
+## number.random
 
 Returns random number between 2 values
 
 ```javascript
-import { random } from '@utils/common/random';
+import { random } from '@utils/number/random';
 ```
 
 ### Usage #1

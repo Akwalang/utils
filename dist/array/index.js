@@ -20,7 +20,6 @@ __exportStar(require("./chunk"), exports);
 __exportStar(require("./combine"), exports);
 __exportStar(require("./create"), exports);
 __exportStar(require("./createSorter"), exports);
-__exportStar(require("./cyclicDeduplicate"), exports);
 __exportStar(require("./deduplicate"), exports);
 __exportStar(require("./difference"), exports);
 __exportStar(require("./intersection"), exports);

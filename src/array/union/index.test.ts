@@ -8,7 +8,7 @@ test('Array.union: default comparator', () => {
 
 test('Array.union: custom comparator', () => {
   const result = union(
-    (a, b) => a.value === b.value,
+    (a) => a.value,
     [{ value: 1 }, { value: 2 }, { value: 3 }],
     [{ value: 3 }, { value: 1 }, { value: 4 }],
     [{ value: 4 }, { value: 4 }, { value: 3 }, { value: 2 }, { value: 5 }]

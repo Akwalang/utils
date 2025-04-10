@@ -4,15 +4,13 @@ export const deduplicate = function deduplicate<T>(
   target: T[],
   getId: GetId<T> = value => value,
 ): T[] {
-  const map: Record<any, any> = {};
+  const map = new Map<string | number | T, T>();
 
   for (let i = 0, len = target.length; i < len; i++) {
-    const id = '' + getId(target[i]);
+    const id = getId(target[i]);
 
-    if (id in map) continue;
-
-    map[id] = target[i];
+    !map.has(id) && map.set(id, target[i]);
   }
 
-  return Object.values(map);
+  return Array.from(map.values());
 };

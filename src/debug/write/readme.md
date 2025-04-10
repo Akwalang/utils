@@ -25,7 +25,7 @@ Name of the result file will be matched by follow rule:
 
 **Return:**
 
-* Promise<undefined> - promise that will be resolved after write operation will finish
+* Promise<undefined> - promise that will be resolved after write operation will be finished
 
 #### Example
 
