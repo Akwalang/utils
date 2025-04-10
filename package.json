@@ -85,14 +85,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LEroyGGG/utils.git"
+    "url": "git+https://github.com/Akwalang/utils.git"
   },
-  "author": "LEroyGGG",
+  "author": "Akwalang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LEroyGGG/utils/issues"
+    "url": "https://github.com/Akwalang/utils/issues"
   },
-  "homepage": "https://github.com/LEroyGGG/utils#readme",
+  "homepage": "https://github.com/Akwalang/utils#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
     "@types/jest": "^29.0.1",
